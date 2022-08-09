@@ -44,6 +44,9 @@ module.exports = {
   devServer: {
     port: 4200,
     hot: isDev,
+    static: {
+      directory: path.join(__dirname, 'src'),
+    },
   },
   plugins: [
     new HTMLWebpackPlugin({
