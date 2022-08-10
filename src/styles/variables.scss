@@ -1,0 +1,161 @@
+// Теперь переопределенные переменные должны содержать ключевое слово ;
+
+// Настройки контейнера ->
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1420px
+) ;
+
+$container-max-widths: (
+        //sm: 540px,
+        //md: 720px,
+        //lg: 960px,
+        xl: 1346px
+);
+
+// <- Настройки контейнера
+
+// Настройки цвета ->
+
+$white:    #ffffff ;
+$gray-100: #F6F8FB ;
+$gray-200: #E5E7EB ;
+$gray-300: #dee2e6;
+$gray-400: #ecf0f1;
+$gray-500: #bdc3c7;
+$gray-600: #95a5a6;
+$gray-700: #7f8c8d;
+$gray-800: #2c3e50;
+$gray-900: #34495e;
+$gray-1000: #090909;
+$black: #000      ;
+
+
+$blue: #2980b9   ;
+$indigo: #9b59b6 ;
+$purple: #8e44ad ;
+$pink: #e83e8c   ;
+$red: #c0392b    ;
+$orange: #f39c12 ;
+$yellow: #f1c40f ;
+$green: #27ae60  ;
+$teal: #16a085   ;
+$cyan: #1abc9c   ;
+
+$primary:       $orange  ;
+$secondary:     $cyan    ;
+$success:       $green   ;
+$warning:       $orange  ;
+$danger:        $red     ;
+$light:         $gray-300;
+$dark:          $gray-1000;
+$lightgray:     $gray-100;
+
+$body-bg: $gray-1000;
+$body-color: $white;
+
+// <- Настройки цвета
+
+// Настройки шрифта ->
+
+$font-family-sans-serif: "PT Sans", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+$font-size-base:              1rem;
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+$line-height-base:            1.5;
+
+$h1-font-size: calc(28px + 16 * (100vw / 1440));
+$h2-font-size: calc(26px + 14 * (100vw / 1440));
+$h3-font-size: calc(24px + 12 * (100vw / 1440));
+$h4-font-size: calc(22px + 10 * (100vw / 1440));
+$h5-font-size: calc(20px + 8 * (100vw / 1440));
+$h6-font-size: calc(18px + 6 * (100vw / 1440));
+$headings-line-height: 1.25      ;
+$headings-font-weight: 700      ;
+$headings-margin-bottom: 16px   ;
+$headings-margin-top: 4px   ;
+$headings-font-family: MagistralC, Magistral;
+
+// <- Настройки шрифта
+
+// Transition
+$transition-base:            all .2s ease-in-out;
+// <- Transition
+
+// Настройки кнопок ->
+
+$border-width:                1px  ;
+$border-radius:               10px ;
+
+$input-btn-padding-y:         12px;
+$input-btn-padding-x:         20px;
+$input-btn-font-family:       $font-family-sans-serif;
+
+$input-btn-padding-y-sm:      16px;
+$input-btn-padding-x-sm:      30px;
+$input-btn-font-size-sm:      $font-size-sm;
+
+$btn-padding-y:               $input-btn-padding-y;
+$btn-padding-x:               $input-btn-padding-x;
+$btn-font-family:             $input-btn-font-family;
+
+$btn-padding-y-sm:            $input-btn-padding-y-sm;
+$btn-padding-x-sm:            $input-btn-padding-x-sm;
+$btn-font-size-sm:            $input-btn-font-size-sm;
+
+// <- Настройки кнопок
+
+// Настройки формы ->
+$input-padding-y:                       10px;
+$input-padding-x:                       20px;
+$input-font-family:                     $input-btn-font-family;
+$input-font-size:                       16px;
+$input-font-weight:                     normal;
+
+$input-padding-y-sm:                    $input-btn-padding-y-sm;
+$input-padding-x-sm:                    $input-btn-padding-x-sm;
+$input-font-size-sm:                    $input-btn-font-size-sm;
+
+$input-bg:                              $white;
+$input-disabled-bg:                     $gray-200;
+
+$input-color:                           $gray-900;
+$input-border-color:                    $gray-500;
+$input-box-shadow:                      0;
+
+$input-border-radius:                   $border-radius;
+
+$input-focus-border-color:              $gray-900;
+
+$input-placeholder-color:               $gray-700;
+$input-height-border:                   1px;
+
+$input-height:                          48px;
+$input-height-sm:                       42px;
+// <- Настройки формы
+
+// Настройки ссылок ->
+$link-color:                              $primary;
+$link-decoration:                         none;
+$link-hover-color:                        $primary;
+$link-hover-decoration:                   none;
+// <- Настройки ссылок
+
+// Modals ->
+
+$modal-inner-padding:               0 40px;
+$modal-border-radius:               null;
+$modal-backdrop-bg:                 $black;
+
+$modal-xl:                          1140px;
+$modal-lg:                          650px;
+$modal-md:                          540px;
+$modal-sm:                          300px;
+
+$modal-transition:                  transform .3s ease-out;
+
+//  <- Modals
