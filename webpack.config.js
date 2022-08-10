@@ -1,7 +1,7 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
@@ -58,21 +58,25 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: fileName('css'),
-    })
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        // Images:
+        {
+          from: path.resolve(__dirname, 'src/assets/images'),
+          to: path.resolve(__dirname, 'dist/assets/images'),
+          noErrorOnMissing: true,
+        },
+        // Fonts:
+        // {
+        //   from: path.resolve(__dirname, 'src/assets/fonts'),
+        //   to: path.resolve(__dirname, 'dist/assets/fonts'),
+        // },
+      ]
+    }),
   ],
   module: {
     rules: [
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     {
-      //       loader: MiniCssExtractPlugin.loader,
-      //       options: {
-      //       },
-      //     },
-      //     'css-loader'
-      //   ]
-      // },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
@@ -83,13 +87,34 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|svg|gif)$/,
-        use: ['file-loader'],
+        test: /\.(png|jpe?g|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/images/[name].[hash].[ext]',
+            }
+          }
+        ]
       },
       {
-        test: /\.('ttf|woff|woff2|eot')$/,
-        use: ['file-loader']
+        // Fonts
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        use: ['file-loader'],
       },
+      // {
+      //   test: /\.(woff|woff2|eot|ttf|otf)$/i,
+      //   type: 'asset/resource',
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         name: '[name].[ext]',
+      //         outputPath: 'assets/fonts'
+      //       }
+      //     }
+      //   ],
+      // },
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
