@@ -1,131 +1,161 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
-const fileName = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
+const isProd = !isDev;
+
+const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+
 const optimization = () => {
-  const config = {
+  const configObj = {
     splitChunks: {
-      chunks: "all",
+      chunks: 'all'
     }
+  };
+
+  if (isProd) {
+    configObj.minimizer = [
+      new OptimizeCssAssetWebpackPlugin(),
+      new TerserWebpackPlugin()
+    ];
   }
 
-  if (!isDev) {
-    config.minimizer = [
-      new OptimizeCssAssetsWebpackPlugin(),
-      new TerserWebpackPlugin(),
-    ]
-  }
+  return configObj;
+};
 
-  return config
-}
-
-module.exports = {
-  context: path.resolve(__dirname, 'src'),
-  mode: 'development',
-  entry: {
-    main: ['@babel/polyfill', './index.js'],
-  },
-  output: {
-    filename: fileName('js'),
-    path: path.resolve(__dirname, 'dist'),
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-    },
-  },
-  optimization: optimization(),
-  devServer: {
-    port: 4200,
-    hot: isDev,
-    static: {
-      directory: path.join(__dirname, 'src'),
-    },
-  },
-  plugins: [
+const plugins = () => {
+  const basePlugins = [
     new HTMLWebpackPlugin({
-      template: './index.html',
+      template: path.resolve(__dirname, 'src/index.html'),
+      filename: 'index.html',
       minify: {
-        collapseWhitespace: !isDev,
+        collapseWhitespace: isProd
       }
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: fileName('css'),
+      filename: `./css/${filename('css')}`
     }),
     new CopyWebpackPlugin({
       patterns: [
-        // Images:
-        {
-          from: path.resolve(__dirname, 'src/assets/images'),
-          to: path.resolve(__dirname, 'dist/assets/images'),
-          noErrorOnMissing: true,
-        },
-        // Fonts:
-        // {
-        //   from: path.resolve(__dirname, 'src/assets/fonts'),
-        //   to: path.resolve(__dirname, 'dist/assets/fonts'),
-        // },
+        {from: path.resolve(__dirname, 'src/assets') , to: path.resolve(__dirname, 'dist')}
       ]
     }),
-  ],
+  ];
+
+  if (isProd) {
+    basePlugins.push(
+        new ImageminPlugin({
+          bail: false, // Ignore errors on corrupted images
+          cache: true,
+          imageminOptions: {
+            plugins: [
+              ["gifsicle", { interlaced: true }],
+              ["jpegtran", { progressive: true }],
+              ["optipng", { optimizationLevel: 5 }],
+              [
+                "svgo",
+                {
+                  plugins: [
+                    {
+                      removeViewBox: false
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        })
+    )
+  }
+
+  return basePlugins;
+};
+
+module.exports = {
+  context: path.resolve(__dirname, 'src/'),
+  mode: 'development',
+  entry: './js/main.js',
+  output: {
+    filename: `./js/${filename('js')}`,
+    assetModuleFilename: "assets/images/[hash][ext]",
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: ''
+  },
+  devServer: {
+    historyApiFallback: true,
+    static: {
+      directory: 'src'
+    },
+    open: true,
+    compress: true,
+    hot: true,
+    port: 3000,
+  },
+  optimization: optimization(),
+  plugins: plugins(),
+  devtool: isProd ? false : 'source-map',
   module: {
     rules: [
       {
-        test: /\.(sa|sc|c)ss$/,
-        use: [
-           isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          "postcss-loader",
-          "sass-loader",
-        ]
+        test: /\.html$/,
+        loader: 'html-loader',
+        options: {
+          esModule: false
+        },
       },
       {
-        test: /\.(png|jpe?g|gif)$/,
+        test: /\.css$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: MiniCssExtractPlugin.loader,
             options: {
-              name: 'assets/images/[name].[hash].[ext]',
+              hmr: isDev
+            },
+          },
+          'css-loader'
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: (resourcePath, context) => {
+                return path.relative(path.dirname(resourcePath), context) + '/';
+              },
             }
-          }
-        ]
+          },
+          'css-loader',
+          'sass-loader'
+        ],
       },
       {
-        // Fonts
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        use: ['file-loader'],
-      },
-      // {
-      //   test: /\.(woff|woff2|eot|ttf|otf)$/i,
-      //   type: 'asset/resource',
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         name: '[name].[ext]',
-      //         outputPath: 'assets/fonts'
-      //       }
-      //     }
-      //   ],
-      // },
-      {
-        test: /\.m?js$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ['@babel/preset-env'],
-            plugins: ['@babel/plugin-proposal-class-properties'],
-          }
-        }
+        use: ['babel-loader'],
+      },
+      {
+        test: /\.(?:|woff2|ttf|eot|woff)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]'
+        },
+      },
+      {
+        test: /\.(?:|gif|png|jpg|jpeg|svg|webp)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: ' assets/images/[name][ext]'
+        },
       }
     ]
   }
-}
+};

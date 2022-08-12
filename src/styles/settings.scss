@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'BLMelody', 'sans-serif';
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-size: $font-size-base;
+    color: $body-color;
+    background-color: $body-bg;
+}
+
+.container {
+    padding: 0 16px;
+}

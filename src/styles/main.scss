@@ -1,20 +1,7 @@
-@import "fonts";
 @import "~normalize.css";
+@import "mixins";
+@import "fonts";
 @import "variables";
+@import "settings";
 @import "ui/a";
 @import "ui/h";
-@import "content/container";
-
-html, body {
-  height: 100%;
-}
-
-body {
-  font-family: 'BLMelody';
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  font-size: $font-size-base;
-  color: $body-color;
-  background-color: $body-bg;
-}

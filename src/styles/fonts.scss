@@ -45,7 +45,6 @@
 //  font-weight: 400;
 //  font-style: normal;
 //}
-@font-face {
-  font-family: 'BLMelody';
-  src: url('../assets/fonts/BLMelody-Regular.ttf') format('truetype');
-}
+@include font-face("BLMelody", "BLMelody-Regular", 400);
+@include font-face("Actay", "Actay-Regular", 400);
+//@include font-face("saira", "saira-extracondensed-regular", 400);
