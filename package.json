@@ -6,7 +6,8 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
-    "start": "cross-env NODE_ENV=development webpack serve --mode development"
+    "start": "cross-env NODE_ENV=development webpack serve --mode development",
+    "icon": "fantasticon ./src/assets/icons -o ./src/assets/icon-font"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,7 @@
     "html-webpack-plugin": "^5.5.0"
   },
   "dependencies": {
+    "fantasticon": "^1.2.3",
     "html-loader": "^4.1.0",
     "normalize.css": "^8.0.1"
   }
