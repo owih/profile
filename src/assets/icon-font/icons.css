@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?e345a818ba101165e4d9ef337bda7ae6#iefix") format("embedded-opentype"),
-url("./icons.woff2?e345a818ba101165e4d9ef337bda7ae6") format("woff2"),
-url("./icons.woff?e345a818ba101165e4d9ef337bda7ae6") format("woff");
+    src: url("./icons.eot?e9dea9754f37da5eecb06fe58595ae03#iefix") format("embedded-opentype"),
+url("./icons.woff2?e9dea9754f37da5eecb06fe58595ae03") format("woff2"),
+url("./icons.woff?e9dea9754f37da5eecb06fe58595ae03") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -16,6 +16,33 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-contrast:before {
+.icon-bubbles:before {
     content: "\f101";
+}
+.icon-contrast:before {
+    content: "\f102";
+}
+.icon-display:before {
+    content: "\f103";
+}
+.icon-git:before {
+    content: "\f104";
+}
+.icon-github:before {
+    content: "\f105";
+}
+.icon-html-five:before {
+    content: "\f106";
+}
+.icon-laptop:before {
+    content: "\f107";
+}
+.icon-mobile:before {
+    content: "\f108";
+}
+.icon-terminal:before {
+    content: "\f109";
+}
+.icon-translate:before {
+    content: "\f10a";
 }
