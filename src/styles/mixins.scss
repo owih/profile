@@ -54,3 +54,73 @@
     font-style: normal;
   }
 }
+
+@mixin font-face-woff($font-family, $url, $weight) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('../fonts/#{$url}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+// Menu burger
+
+@mixin burger ($width, $height) {
+  width: $width;
+  height: $height;
+  position: relative;
+  color: $themecolor;
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: calc(100% - 3px);
+  }
+
+  &_active {
+    .burger__line {
+      transform: scale(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      top: 50%;
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      top: 50%;
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+  }
+}

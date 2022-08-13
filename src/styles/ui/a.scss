@@ -1,6 +1,7 @@
 a {
   text-decoration: $link-decoration;
   color: $link-color;
+  transition: $transition-base;
   &:hover {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;

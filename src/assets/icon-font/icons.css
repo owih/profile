@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?e9dea9754f37da5eecb06fe58595ae03#iefix") format("embedded-opentype"),
-url("./icons.woff2?e9dea9754f37da5eecb06fe58595ae03") format("woff2"),
-url("./icons.woff?e9dea9754f37da5eecb06fe58595ae03") format("woff");
+    src: url("./icons.eot?f465f6a15d0f4ccc4fcef1e760333f88#iefix") format("embedded-opentype"),
+url("./icons.woff2?f465f6a15d0f4ccc4fcef1e760333f88") format("woff2"),
+url("./icons.woff?f465f6a15d0f4ccc4fcef1e760333f88") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -25,24 +25,39 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-display:before {
     content: "\f103";
 }
-.icon-git:before {
+.icon-drawer:before {
     content: "\f104";
 }
-.icon-github:before {
+.icon-fire:before {
     content: "\f105";
 }
-.icon-html-five:before {
+.icon-git:before {
     content: "\f106";
 }
-.icon-laptop:before {
+.icon-github:before {
     content: "\f107";
 }
-.icon-mobile:before {
+.icon-home:before {
     content: "\f108";
 }
-.icon-terminal:before {
+.icon-html-five:before {
     content: "\f109";
 }
-.icon-translate:before {
+.icon-laptop:before {
     content: "\f10a";
+}
+.icon-mobile:before {
+    content: "\f10b";
+}
+.icon-steam:before {
+    content: "\f10c";
+}
+.icon-telegram:before {
+    content: "\f10d";
+}
+.icon-terminal:before {
+    content: "\f10e";
+}
+.icon-translate:before {
+    content: "\f10f";
 }

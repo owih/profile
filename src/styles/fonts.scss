@@ -1,50 +1,6 @@
-//@font-face {
-//  font-family: 'ActayFamily';
-//  src: url('../assets/fonts/ActayFamily/ActayWide-Bold.eot');
-//  src: local('ActayWide Bold'), local('ActayWide-Bold'),
-//  url('../assets/fonts/ActayFamily/ActayWide-Bold.eot?#iefix') format('embedded-opentype'),
-//  url('../assets/fonts/ActayFamily/ActayWide-Bold.woff2') format('woff2'),
-//  url('../assets/fonts/ActayFamily/ActayWide-Bold.woff') format('woff'),
-//  url('../assets/fonts/ActayFamily/ActayWide-Bold.ttf') format('truetype');
-//  font-weight: 700;
-//  font-style: italic;
-//}
-//
-//@font-face {
-//  font-family: 'ActayFamily';
-//  src: url('../../assets/fonts/ActayFamily/Actay-Regular.eot');
-//  src: local('ActayWide Regular'), local('ActayWide-Regular'),
-//  url('../../assets/fonts/ActayFamily/Actay-Regular.eot?#iefix') format('embedded-opentype'),
-//  url('../../assets/fonts/ActayFamily/Actay-Regular.woff2') format('woff2'),
-//  url('../../assets/fonts/ActayFamily/Actay-Regular.woff') format('woff'),
-//  url('../../assets/fonts/ActayFamily/Actay-Regular.ttf') format('truetype');
-//  font-weight: 700;
-//  font-style: italic;
-//}
-//
-//@font-face {
-//  font-family: 'BLMelody';
-//  src: url('../../assets/fonts/BLMelody/BLMelody-Bold.eot');
-//  src: local('../assets/fonts/BLMelody Bold'), local('../../assets/fonts/BLMelody-Bold'),
-//  url('../../assets/fonts/BLMelody/BLMelody-Bold.eot?#iefix') format('embedded-opentype'),
-//  url('../../assets/fonts/BLMelody/BLMelody-Bold.woff2') format('woff2'),
-//  url('../../assets/fonts/BLMelody/BLMelody-Bold.woff') format('woff'),
-//  url('../../assets/fonts/BLMelody/BLMelody-Bold.ttf') format('truetype');
-//  font-weight: 700;
-//  font-style: italic;
-//}
-//
-//@font-face {
-//  font-family: 'BLMelody';
-//  src: url('../assets/fonts/BLMelody-Regular.eot');
-//  src: local('BLMelody'), local('../../assets/fonts/BLMelody-Regular.ttf'),
-//  url('../assets/fonts/BLMelody-Regular.eot?#iefix') format('embedded-opentype'),
-//  url('../assets/fonts/BLMelody-Regular.woff2') format('woff2'),
-//  url('../assets/fonts/BLMelody-Regular.woff') format('woff'),
-//  url('../assets/fonts/BLMelody-Regular.ttf') format('truetype');
-//  font-weight: 400;
-//  font-style: normal;
-//}
 @include font-face("BLMelody", "BLMelody-Regular", 400);
+@include font-face("BLMelodyBold", "BLMelody-Bold", 700);
 @include font-face("Actay", "Actay-Regular", 400);
-//@include font-face("saira", "saira-extracondensed-regular", 400);
+@include font-face("ActayBold", "ActayWide-Bold", 700);
+@include font-face-woff("PalaceOfSports", "Palace_of_Sports", 400);
+@include font-face-woff("SovMod", "SovMod", 400);
