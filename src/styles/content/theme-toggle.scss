@@ -1,0 +1,16 @@
+.theme-toggle {
+  &__label {
+    cursor: pointer;
+    &:hover {
+      color: $primary;
+    }
+  }
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .icon {
+    font-size: 24px;
+  }
+}

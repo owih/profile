@@ -49,6 +49,7 @@
   "dependencies": {
     "fantasticon": "^1.2.3",
     "html-loader": "^4.1.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "p5": "^0.10.2"
   }
 }

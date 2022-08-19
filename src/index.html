@@ -7,40 +7,50 @@
 <body>
 <div class="wrapper">
     <aside class="sidebar">
-        <div class="sidebar__inner">
-            <div class="sidebar__header">
-                <div class="sidebar__toggle" data-toggle="burger">
+        <div class="sidebar__header">
+            <div class="sidebar__toggle sidebar__toggle_mobile" data-toggle="burger">
+                <div class="sidebar__toggle-icon" data-toggle="icon">
                     <span class="sidebar__line">
                     </span>
                 </div>
             </div>
+        </div>
+        <div class="sidebar__inner">
             <div class="sidebar__body">
                 <ul class="sidebar__list">
                     <li class="sidebar__item"><a href="#" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-home"></i></span><span class="sidebar__text-hidden">Home</span></a></li>
                     <li class="sidebar__item"><a href="#" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-fire"></i></span><span class="sidebar__text-hidden">Skills</span></a></li>
                     <li class="sidebar__item"><a href="#" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-drawer"></i></span><span class="sidebar__text-hidden">Work</span></a></li>
-                    <li class="sidebar__item"><a href="#" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-bubbles"></i></span><span class="sidebar__text-hidden">Contact</span></a></li>
+                    <li class="sidebar__item"><a href="#" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-bubble2"></i></span><span class="sidebar__text-hidden">Contact</span></a></li>
                     <li class="sidebar__item"><a href="#" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-git"></i></span><span class="sidebar__text-hidden">Cats?</span></a></li>
                 </ul>
             </div>
             <div class="sidebar__social">
                 <ul class="sidebar__list sidebar__list_redirection">
                     <li class="sidebar__item sidebar__item_bottom">
-                        <a href="#" class="sidebar__link">
+                        <div class="theme-toggle" data-toggle="theme">
+                            <label class="theme-toggle__label" for="theme-toggle">
+                                <i class="icon icon-contrast"></i>
+                            </label>
+                            <input class="theme-toggle__input" data-target="checkbox" id="theme-toggle" type="checkbox">
+                        </div>
+                    </li>
+                    <li class="sidebar__item sidebar__item_bottom sidebar__item_hidden">
+                        <a href="#" class="sidebar__social-link">
                             <span class="sidebar__icon">
                                <i class="icon icon-github"></i>
                             </span>
                         </a>
                     </li>
                     <li class="sidebar__item sidebar__item_bottom sidebar__item_hidden">
-                        <a href="#" class="sidebar__link">
+                        <a href="#" class="sidebar__social-link">
                             <span class="sidebar__icon">
                                <i class="icon icon-telegram"></i>
                             </span>
                         </a>
                     </li>
                     <li class="sidebar__item sidebar__item_bottom sidebar__item_hidden">
-                        <a href="#" class="sidebar__link">
+                        <a href="#" class="sidebar__social-link">
                             <span class="sidebar__icon">
                                <i class="icon icon-steam"></i>
                             </span>
@@ -53,6 +63,7 @@
     <main class="main">
         <div class="container">
             <h1>example</h1>
+            <a href="#">EXAMPLEEEE</a>
         </div>
     </main>
 </div>

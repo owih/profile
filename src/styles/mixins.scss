@@ -71,7 +71,8 @@
   width: $width;
   height: $height;
   position: relative;
-  color: $themecolor;
+  color: var(--themetoggle);
+  transition: color 0.3s ease-in-out;
 
   &__line {
     position: absolute;
