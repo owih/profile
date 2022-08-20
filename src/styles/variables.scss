@@ -14,6 +14,8 @@ $container-max-widths: (
         xl: 1346px
 );
 
+$scrollbar-width: 6px;
+
 // <- Настройки контейнера
 
 // Настройки цвета ->
@@ -72,6 +74,7 @@ $h3-font-size: calc(24px + 12 * (100vw / 1440));
 $h4-font-size: calc(22px + 10 * (100vw / 1440));
 $h5-font-size: calc(20px + 8 * (100vw / 1440));
 $h6-font-size: calc(18px + 6 * (100vw / 1440));
+
 $headings-line-height: 1.25      ;
 $headings-font-weight: 700      ;
 $headings-margin-bottom: 16px   ;

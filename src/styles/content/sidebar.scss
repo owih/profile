@@ -1,3 +1,5 @@
+// TODO: smooth text jumping while open sidebar panel on mobile
+
 .sidebar {
   transition: width 0.2s ease;
   position: absolute;
@@ -5,12 +7,6 @@
   left: 0;
   right: 0;
   border-right: 1px solid var(--border-colored);
-  &_opened & {
-    &__inner {
-      opacity: 1;
-      z-index: 0;
-    }
-  }
   @include media-breakpoint-up(md) {
     position: static;
     width: 58px;
@@ -23,6 +19,17 @@
     }
   }
   &_opened & {
+    &__list {
+      // prevent jumping because of scroll bar
+      margin: auto $scrollbar-width auto 0;
+    }
+    &__inner {
+      opacity: 1;
+      z-index: 1;
+      @include media-breakpoint-up(md) {
+        z-index: 0;
+      }
+    }
     &__item_hidden {
       @include media-breakpoint-up(md) {
         position: relative;
@@ -36,6 +43,9 @@
         left: 0;
         opacity: 1;
       }
+    }
+    &__header {
+      right: $scrollbar-width;
     }
   }
   &__header,
@@ -51,16 +61,18 @@
     }
   }
   &__header {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 16px;
-    z-index: 1;
+    right: 0;
+    z-index: 2;
     @include media-breakpoint-up(md) {
+      z-index: 1;
       left: 0;
       right: unset;
     }
   }
   &__body {
+    position: relative;
     margin: auto 0;
     display: flex;
     justify-content: center;
@@ -82,26 +94,11 @@
     flex-direction: column;
     justify-content: space-between;
     transition: opacity 0.3s ease-in-out;
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background-color: $cyan;
-      opacity: 0.6;
-      z-index: -1;
-    }
     @include media-breakpoint-up(md) {
-      position: static;
       width: unset;
       z-index: 0;
       opacity: 1;
       transition: unset;
-      &:before {
-        content: unset;
-      }
     }
   }
   &__list {

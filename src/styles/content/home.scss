@@ -1,0 +1,21 @@
+.home {
+  height: 100%;
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  // TODO: rewrite width style to adaptive one
+  &__title {
+    height: auto;
+    transition: $transition-base;
+    @include media-breakpoint-up(md) {
+      width: 500px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 700px;
+    }
+  }
+}

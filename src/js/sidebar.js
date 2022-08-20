@@ -3,6 +3,8 @@ const Classes = {
   BURGER_ACTIVE: 'sidebar__toggle-icon_active',
   BURGER_MOBILE: 'sidebar_mobile',
   SCROLL_BLOCKED: 'scroll-blocked',
+  SECTIONS: 'section',
+  SECTION_HIDDEN: 'section_hidden',
 }
 
 const Selectors = {
@@ -15,6 +17,7 @@ export default class Sidebar {
     this.block = block;
     this.toggleControl = this.block.querySelectorAll(Selectors.BURGER).item(0);
     this.toggleControlIcon = this.block.querySelectorAll(Selectors.TOGGLE_ICON).item(0);
+    this.sectionsArray = [...document.getElementsByClassName(Classes.SECTIONS)];
 
     this.clickHandler = this.clickHandler.bind(this);
     this.resizeHandler = this.resizeHandler.bind(this);
@@ -48,9 +51,11 @@ export default class Sidebar {
   }
 
   clickHandler() {
+    console.log(this.sectionsArray)
     this.toggleControlIcon.classList.toggle(Classes.BURGER_ACTIVE);
     this.block.classList.toggle(Classes.OPENED);
     this.addLockClassToBody();
+    this.sectionsArray.forEach((item) => { item.classList.toggle('section_hidden') });
   }
 
   addLockClassToBody() {

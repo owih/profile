@@ -17,9 +17,11 @@ body {
     transition: $transition-base;
 
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
     //background: white;
+    height: 3000px;
+    &.scroll-blocked {
+        overflow: hidden;
+    }
 }
 body.light {
     color: $dark;
@@ -31,6 +33,7 @@ body.light {
 }
 .main {
     flex-grow: 1;
+    position: relative;
 }
 .wrapper {
     display: flex;
@@ -38,4 +41,38 @@ body.light {
 }
 .container {
     padding: 0 16px;
+    height: 100%;
+}
+.section {
+    height: 100vh;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    &_hidden {
+        opacity: 0;
+        margin-right: $scrollbar-width;
+        @include media-breakpoint-up(md) {
+            opacity: unset;
+            margin-right: unset;
+        }
+    }
+}
+// TODO: add some transition properties to scrollbar background toggle
+
+::-webkit-scrollbar {
+    width: $scrollbar-width;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--themecolor);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--themetoggle);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $primary;
 }

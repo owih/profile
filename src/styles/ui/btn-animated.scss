@@ -1,0 +1,44 @@
+.btn-animated{
+  position: relative;
+  display: inline-flex;
+  min-width: 180px;
+  min-height: 55px;
+  perspective: 1000px;
+}
+.btn-animated a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.btn-animated a:before,
+.btn-animated a:after{
+  position: absolute;
+  content: attr(data-text);
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid var(--themetoggle);
+  transition: border 0.3s ease-in-out;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.btn-animated a:before{
+  color: var(--themecolor);
+  background: var(--themetoggle);
+  transition: $transition-base;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.btn-animated a:after{
+  color: var(--themetoggle);
+  transform: rotateX(90deg) translateZ(25px);
+  transition: color 0.3s ease-in-out;
+}
+.btn-animated a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
