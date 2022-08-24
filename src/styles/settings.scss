@@ -1,78 +1,77 @@
 html, body {
-    height: 100%;
+  height: 100%;
 }
 body {
-    color: $white;
-    background-color: $dark;
-    --themecolor: #090909;
-    --themetoggle: #FFFFFF;
-    --border-color: #FFFFFF;
-    --border-colored: hsla(0,0%,50%,.1);
+  color: $white;
+  background-color: $dark;
+  --themecolor: #090909;
+  --themetoggle: #FFFFFF;
+  --border-color: #FFFFFF;
+  --border-colored: hsla(0,0%,50%,.1);
 
-    font-family: 'Actay', 'sans-serif';
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    font-size: $font-size-base;
-    transition: $transition-base;
+  font-family: 'BLMelody', 'sans-serif';
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-size: $font-size-base;
+  transition: $transition-base;
 
-    margin: 0;
-    //background: white;
-    height: 3000px;
-    &.scroll-blocked {
-        overflow: hidden;
-    }
+  margin: 0;
+  &.scroll-blocked {
+    overflow: hidden;
+  }
 }
 body.light {
-    color: $dark;
-    background-color: $white;
-    --themecolor: #FFFFFF;
-    --themetoggle: #090909;
-    --border-color: #000000;
-    --border-colored: hsla(0, 2%, 60%, 0.2);
+  color: $dark;
+  background-color: $white;
+  --themecolor: #FFFFFF;
+  --themetoggle: #090909;
+  --border-color: #000000;
+  --border-colored: hsla(0, 2%, 60%, 0.2);
 }
 .main {
-    flex-grow: 1;
-    position: relative;
+  flex-grow: 1;
+  position: relative;
 }
 .wrapper {
-    display: flex;
-    flex-grow: 1;
+  display: flex;
+  flex-grow: 1;
 }
 .container {
-    padding: 0 16px;
-    height: 100%;
+  padding: 0 16px;
+  height: 100%;
 }
 .section {
-    height: 100vh;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-    &_hidden {
-        opacity: 0;
-        margin-right: $scrollbar-width;
-        @include media-breakpoint-up(md) {
-            opacity: unset;
-            margin-right: unset;
-        }
+  height: 100vh;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+  &_hidden {
+    opacity: 0;
+    margin-right: $scrollbar-width;
+    @include media-breakpoint-up(md) {
+      opacity: unset;
+      margin-right: unset;
     }
+  }
 }
 // TODO: add some transition properties to scrollbar background toggle
 
 ::-webkit-scrollbar {
-    width: $scrollbar-width;
+  width: $scrollbar-width;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--themecolor);
+  background: var(--themecolor);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--themetoggle);
+  background: var(--themetoggle);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: $primary;
+  background: $primary;
 }

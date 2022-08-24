@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?3ba8360c7907600c6a24c0654cb74480#iefix") format("embedded-opentype"),
-url("./icons.woff2?3ba8360c7907600c6a24c0654cb74480") format("woff2"),
-url("./icons.woff?3ba8360c7907600c6a24c0654cb74480") format("woff");
+    src: url("./icons.eot?7048648de7ee5b11ac9686f760dfca50#iefix") format("embedded-opentype"),
+url("./icons.woff2?7048648de7ee5b11ac9686f760dfca50") format("woff2"),
+url("./icons.woff?7048648de7ee5b11ac9686f760dfca50") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -16,54 +16,54 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-bubble2:before {
+.icon-bubble:before {
     content: "\f101";
 }
 .icon-bubbles:before {
     content: "\f102";
 }
-.icon-bubbles2:before {
+.icon-contrast:before {
     content: "\f103";
 }
-.icon-contrast:before {
+.icon-display:before {
     content: "\f104";
 }
-.icon-display:before {
+.icon-drawer:before {
     content: "\f105";
 }
-.icon-drawer:before {
+.icon-fire:before {
     content: "\f106";
 }
-.icon-fire:before {
+.icon-git:before {
     content: "\f107";
 }
-.icon-git:before {
+.icon-github:before {
     content: "\f108";
 }
-.icon-github:before {
+.icon-home:before {
     content: "\f109";
 }
-.icon-home:before {
+.icon-html-five:before {
     content: "\f10a";
 }
-.icon-html-five:before {
+.icon-laptop:before {
     content: "\f10b";
 }
-.icon-laptop:before {
+.icon-mobile:before {
     content: "\f10c";
 }
-.icon-mobile:before {
+.icon-steam:before {
     content: "\f10d";
 }
-.icon-steam:before {
+.icon-telegram:before {
     content: "\f10e";
 }
-.icon-telegram:before {
+.icon-terminal:before {
     content: "\f10f";
 }
-.icon-terminal:before {
+.icon-translate:before {
     content: "\f110";
 }
-.icon-translate:before {
+.icon-user:before {
     content: "\f111";
 }

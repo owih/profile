@@ -84,7 +84,7 @@ module.exports = {
   entry: './js/main.js',
   output: {
     filename: `./js/${filename('js')}`,
-    assetModuleFilename: "assets/images/[hash][ext]",
+    assetModuleFilename: "assets/img/[hash][ext]",
     path: path.resolve(__dirname, 'dist'),
     publicPath: ''
   },
@@ -153,7 +153,7 @@ module.exports = {
         test: /\.(?:|gif|png|jpg|jpeg|svg|webp)$/,
         type: 'asset/resource',
         generator: {
-          filename: ' assets/images/[name][ext]'
+          filename: ' assets/img/[name][ext]'
         },
       }
     ]

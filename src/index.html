@@ -18,11 +18,11 @@
         <div class="sidebar__inner">
             <div class="sidebar__body">
                 <ul class="sidebar__list">
-                    <li class="sidebar__item"><a href="#" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-home"></i></span><span class="sidebar__text-hidden">Home</span></a></li>
-                    <li class="sidebar__item"><a href="#" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-fire"></i></span><span class="sidebar__text-hidden">Skills</span></a></li>
-                    <li class="sidebar__item"><a href="#" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-drawer"></i></span><span class="sidebar__text-hidden">Work</span></a></li>
-                    <li class="sidebar__item"><a href="#" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-bubble2"></i></span><span class="sidebar__text-hidden">Contact</span></a></li>
-                    <li class="sidebar__item"><a href="#" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-git"></i></span><span class="sidebar__text-hidden">Cats?</span></a></li>
+                    <li class="sidebar__item"><a href="#home" data-action="scrollTo" data-target="home" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-home"></i></span><span class="sidebar__text-hidden">Home</span></a></li>
+                    <li class="sidebar__item"><a href="#about" data-action="scrollTo" data-target="about" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-user"></i></span><span class="sidebar__text-hidden">About</span></a></li>
+                    <li class="sidebar__item"><a href="#work" data-action="scrollTo" data-target="work" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-drawer"></i></span><span class="sidebar__text-hidden">Work</span></a></li>
+                    <li class="sidebar__item"><a href="#" data-action="scrollTo" data-target="about" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-bubbles"></i></span><span class="sidebar__text-hidden">Contact</span></a></li>
+                    <li class="sidebar__item"><a href="#" data-action="scrollTo" data-target="about" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-git"></i></span><span class="sidebar__text-hidden">Cats?</span></a></li>
                 </ul>
             </div>
             <div class="sidebar__social">
@@ -66,18 +66,14 @@
             <div class="stars__second"></div>
             <div class="stars__third"></div>
         </div>
-        <section class="section">
+        <section class="section" id="home">
             <div class="home">
                 <div class="container">
                     <div class="home__inner">
                         <div class="home__centered">
                             <div class="home__title">
-<!--                            <h1>-->
-<!--                                Hello! I`m Dmitriy,-->
-<!--                                <br>-->
-<!--                                Frontend developer-->
-<!--                            </h1>-->
                                 <h1 class="word-animated"
+                                    data-title="Title example"
                                     data-text1="Hello! I`m Dmitriy, Frontend developer"
                                     data-text2="Привет! Меня зовут Дмитрий, я - Фронтенд разработчик">
                                 </h1>
@@ -85,6 +81,115 @@
                             <div class="home__links">
                                 <div class="btn-animated">
                                     <a href="#" data-text="Contact me"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="about">
+            <div class="about">
+                <div class="container">
+                    <div class="about__inner">
+                        <div class="about__title">
+                            <h1>About me</h1>
+                        </div>
+                        <div class="about__text">
+                            <p>
+                                I’m a Front-End Developer located in Russia, Volgograd.
+                                I've been doing frontend development for over a year.
+                            </p>
+                            <p>
+                                Well-organized person with great attention to detail. Fan of TV series,
+                                basketball and gym activities
+                            </p>
+                            <p>
+                                I like to solve interesting problems and learn very quickly
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="work">
+            <div class="work">
+                <div class="container">
+                    <div class="work__inner">
+                        <div class="work__title">
+                            <h1>My works</h1>
+                        </div>
+                        <div class="work__grid-wrapper">
+                            <div class="work-grid">
+                                <div class="work-grid__item">
+                                    <div class="work-card">
+                                        <div class="work-card__image">
+                                            <img class="image" src="assets/img/me.jpg" alt="img">
+                                        </div>
+                                        <div class="work-card__additional">
+                                            <div class="work-card__links">
+                                                <div class="work-card__links-item">
+                                                    <a href="#" class="work-card__link">
+                                                        <i class="icon icon-display"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="work-card__links-item">
+                                                    <a href="#" class="work-card__link">
+                                                        <i class="icon icon-github"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="work-grid__item">
+                                    <div class="work-card">
+                                        <div class="work-card__image">
+                                            <img class="image" src="https://via.placeholder.com/400" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="work-grid__item">
+                                    <div class="work-card">
+                                        <div class="work-card__image">
+                                            <img class="image" src="https://via.placeholder.com/400" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="work-grid__item">
+                                    <div class="work-card">
+                                        <div class="work-card__image">
+                                            <img class="image" src="https://via.placeholder.com/400" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="work-grid__item">
+                                    <div class="work-card">
+                                        <div class="work-card__image">
+                                            <img class="image" src="https://via.placeholder.com/400" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="work-grid__item">
+                                    <div class="work-card">
+                                        <div class="work-card__image">
+                                            <img class="image" src="https://via.placeholder.com/400" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="work-grid__item">
+                                    <div class="work-card">
+                                        <div class="work-card__image">
+                                            <img class="image" src="https://via.placeholder.com/400" alt="img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="work-grid__item">
+                                    <div class="work-card">
+                                        <div class="work-card__image">
+                                            <img class="image" src="https://via.placeholder.com/400" alt="img">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

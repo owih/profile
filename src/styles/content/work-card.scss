@@ -1,0 +1,65 @@
+.work-card {
+  height: 100%;
+  position: relative;
+  transition: $transition-base;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--themecolor);
+    opacity: 0.5;
+  }
+  &:after {
+    content: 'Soon';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+  }
+  &:hover & {
+    &__additional {
+      transition: $transition-base;
+      opacity: 1;
+      z-index: 1;
+      //transform: translateY(0);
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    margin: 0 -8px;
+  }
+  &__additional {
+    padding: 8px;
+    transition: $transition-base;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: var(--themecolor);
+    border-radius: 20px;
+    //transform: translateY(100%);
+    //opacity: 0;
+    //z-index: -1;
+  }
+  &__link {
+    color: var(--themetoggle);
+    font-size: 34px;
+    padding: 0 8px;
+  }
+  &__image {
+    height: 100%;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
