@@ -5,8 +5,29 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     @include media-breakpoint-up(lg) {
+      align-items: start;
       padding: 0 10%;
     }
+  }
+  &__grid-wrapper {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    };
+  }
+  &__swiper-wrapper {
+    transition: $transition-base;
+    max-width: 268px;
+    @include media-breakpoint-up(sm) {
+      max-width: 400px;
+    };
+    @include media-breakpoint-up(md) {
+      max-width: 440px;
+    };
+    @include media-breakpoint-up(lg) {
+      display: none;
+    };
   }
 }

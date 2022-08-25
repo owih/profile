@@ -14,6 +14,6 @@ export default class ScrollTo {
 
 	clickHandler(event) {
 		event.preventDefault();
-		this.target.scrollIntoView({behavior: "smooth", block: "start"});
+		if (this.target) this.target.scrollIntoView({behavior: "smooth", block: "start"});
 	}
 }

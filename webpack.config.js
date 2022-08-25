@@ -44,7 +44,8 @@ const plugins = () => {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        {from: path.resolve(__dirname, 'src/assets') , to: path.resolve(__dirname, 'dist')}
+        {from: path.resolve(__dirname, 'src/assets') , to: path.resolve(__dirname, 'dist/assets')},
+        {from: path.resolve(__dirname, 'src/phpmailer') , to: path.resolve(__dirname, 'dist/phpmailer')}
       ]
     }),
   ];
@@ -111,19 +112,7 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              hmr: isDev
-            },
-          },
-          'css-loader'
-        ],
-      },
-      {
-        test: /\.s[ac]ss$/,
+        test: /\.(css|s[ac]ss)$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -146,14 +135,18 @@ module.exports = {
         test: /\.(?:|woff2|ttf|eot|woff)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name][ext]'
+          filename: 'assets/fonts/[name][ext]'
         },
+      },
+      {
+        test: /\.php$/,
+        type: 'asset/resource',
       },
       {
         test: /\.(?:|gif|png|jpg|jpeg|svg|webp)$/,
         type: 'asset/resource',
         generator: {
-          filename: ' assets/img/[name][ext]'
+          filename: 'assets/img/[name][ext]'
         },
       }
     ]

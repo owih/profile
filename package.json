@@ -49,7 +49,9 @@
   "dependencies": {
     "fantasticon": "^1.2.3",
     "html-loader": "^4.1.0",
+    "nodemailer": "^6.7.8",
     "normalize.css": "^8.0.1",
-    "p5": "^0.10.2"
+    "p5": "^0.10.2",
+    "swiper": "^8.3.2"
   }
 }

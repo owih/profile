@@ -1,6 +1,11 @@
 html, body {
   height: 100%;
 }
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
 body {
   color: $white;
   background-color: $dark;
@@ -8,6 +13,7 @@ body {
   --themetoggle: #FFFFFF;
   --border-color: #FFFFFF;
   --border-colored: hsla(0,0%,50%,.1);
+  --input-box-shadow-color: coral;
 
   font-family: 'BLMelody', 'sans-serif';
   display: flex;
@@ -28,6 +34,7 @@ body.light {
   --themetoggle: #090909;
   --border-color: #000000;
   --border-colored: hsla(0, 2%, 60%, 0.2);
+  --input-box-shadow-color: coral;
 }
 .main {
   flex-grow: 1;

@@ -1,0 +1,14 @@
+.cool-swiper {
+  &.swiper {
+    overflow: unset;
+  }
+  & &__control {
+    top: unset;
+    bottom: -62px;
+    &:after {
+      color: var(--themetoggle);
+      font-size: 26px;
+      font-weight: bold;
+    }
+  }
+}
