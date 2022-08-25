@@ -1,7 +1,6 @@
 export type IconsId =
-  | "bubble2"
+  | "bubble"
   | "bubbles"
-  | "bubbles2"
   | "contrast"
   | "display"
   | "drawer"
@@ -12,15 +11,16 @@ export type IconsId =
   | "html-five"
   | "laptop"
   | "mobile"
+  | "notification"
   | "steam"
   | "telegram"
   | "terminal"
-  | "translate";
+  | "translate"
+  | "user";
 
 export type IconsKey =
-  | "Bubble2"
+  | "Bubble"
   | "Bubbles"
-  | "Bubbles2"
   | "Contrast"
   | "Display"
   | "Drawer"
@@ -31,15 +31,16 @@ export type IconsKey =
   | "HtmlFive"
   | "Laptop"
   | "Mobile"
+  | "Notification"
   | "Steam"
   | "Telegram"
   | "Terminal"
-  | "Translate";
+  | "Translate"
+  | "User";
 
 export enum Icons {
-  Bubble2 = "bubble2",
+  Bubble = "bubble",
   Bubbles = "bubbles",
-  Bubbles2 = "bubbles2",
   Contrast = "contrast",
   Display = "display",
   Drawer = "drawer",
@@ -50,28 +51,31 @@ export enum Icons {
   HtmlFive = "html-five",
   Laptop = "laptop",
   Mobile = "mobile",
+  Notification = "notification",
   Steam = "steam",
   Telegram = "telegram",
   Terminal = "terminal",
   Translate = "translate",
+  User = "user",
 }
 
 export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
-  [Icons.Bubble2]: "61697",
+  [Icons.Bubble]: "61697",
   [Icons.Bubbles]: "61698",
-  [Icons.Bubbles2]: "61699",
-  [Icons.Contrast]: "61700",
-  [Icons.Display]: "61701",
-  [Icons.Drawer]: "61702",
-  [Icons.Fire]: "61703",
-  [Icons.Git]: "61704",
-  [Icons.Github]: "61705",
-  [Icons.Home]: "61706",
-  [Icons.HtmlFive]: "61707",
-  [Icons.Laptop]: "61708",
-  [Icons.Mobile]: "61709",
+  [Icons.Contrast]: "61699",
+  [Icons.Display]: "61700",
+  [Icons.Drawer]: "61701",
+  [Icons.Fire]: "61702",
+  [Icons.Git]: "61703",
+  [Icons.Github]: "61704",
+  [Icons.Home]: "61705",
+  [Icons.HtmlFive]: "61706",
+  [Icons.Laptop]: "61707",
+  [Icons.Mobile]: "61708",
+  [Icons.Notification]: "61709",
   [Icons.Steam]: "61710",
   [Icons.Telegram]: "61711",
   [Icons.Terminal]: "61712",
   [Icons.Translate]: "61713",
+  [Icons.User]: "61714",
 };
