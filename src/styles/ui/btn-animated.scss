@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
   border: 5px solid var(--themetoggle);
-  transition: border 0.3s ease-in-out;
+  transition: border 0.2s ease-in-out;
   box-sizing: border-box;
   border-radius: 5px;
 }
@@ -37,7 +37,7 @@
 .btn-animated a:after{
   color: var(--themetoggle);
   transform: rotateX(90deg) translateZ(25px);
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .btn-animated a:hover{
   transform: translateZ(-25px) rotateX(-90deg);

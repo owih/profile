@@ -19,17 +19,17 @@
         <div class="sidebar__inner">
             <div class="sidebar__body">
                 <ul class="sidebar__list">
-                    <li class="sidebar__item"><a href="#home" data-action="scrollTo" data-target="home" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-home"></i></span><span class="sidebar__text-hidden">Home</span></a></li>
-                    <li class="sidebar__item"><a href="#about" data-action="scrollTo" data-target="about" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-user"></i></span><span class="sidebar__text-hidden">About</span></a></li>
-                    <li class="sidebar__item"><a href="#work" data-action="scrollTo" data-target="work" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-drawer"></i></span><span class="sidebar__text-hidden">Work</span></a></li>
-                    <li class="sidebar__item"><a href="#" data-action="scrollTo" data-target="contact" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-bubbles"></i></span><span class="sidebar__text-hidden">Contact</span></a></li>
-                    <li class="sidebar__item"><a href="#" data-action="scrollTo" data-target="cats" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-git"></i></span><span class="sidebar__text-hidden">Cats?</span></a></li>
+                    <li class="sidebar__item"><a href="#home" data-description="Scroll to home page" data-action="scrollTo" data-target="home" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-home"></i></span><span class="sidebar__text-hidden">Home</span></a></li>
+                    <li class="sidebar__item"><a href="#about" data-description="About me" data-action="scrollTo" data-target="about" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-user"></i></span><span class="sidebar__text-hidden">About</span></a></li>
+                    <li class="sidebar__item"><a href="#work" data-description="Portfolio (Soon)" data-action="scrollTo" data-target="work" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-drawer"></i></span><span class="sidebar__text-hidden">Work</span></a></li>
+                    <li class="sidebar__item"><a href="#contact" data-description="Send mail" data-action="scrollTo" data-target="contact" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-bubbles"></i></span><span class="sidebar__text-hidden">Contact</span></a></li>
+                    <li class="sidebar__item"><a href="#cats" data-description="Some cats?" data-action="scrollTo" data-target="cats" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-git"></i></span><span class="sidebar__text-hidden">Cats?</span></a></li>
                 </ul>
             </div>
             <div class="sidebar__social">
                 <ul class="sidebar__list sidebar__list_redirection">
                     <li class="sidebar__item sidebar__item_bottom">
-                        <div class="theme-toggle" data-toggle="theme">
+                        <div class="theme-toggle" data-toggle="theme" data-description="Switch theme color">
                             <label class="theme-toggle__label" for="theme-toggle">
                                 <i class="icon icon-contrast"></i>
                             </label>
@@ -37,21 +37,21 @@
                         </div>
                     </li>
                     <li class="sidebar__item sidebar__item_bottom sidebar__item_hidden">
-                        <a href="#" class="sidebar__social-link">
+                        <a href="#" data-description="Github" class="sidebar__social-link">
                             <span class="sidebar__icon">
                                <i class="icon icon-github"></i>
                             </span>
                         </a>
                     </li>
                     <li class="sidebar__item sidebar__item_bottom sidebar__item_hidden">
-                        <a href="#" class="sidebar__social-link">
+                        <a href="#" data-description="Telegram" class="sidebar__social-link">
                             <span class="sidebar__icon">
                                <i class="icon icon-telegram"></i>
                             </span>
                         </a>
                     </li>
                     <li class="sidebar__item sidebar__item_bottom sidebar__item_hidden">
-                        <a href="#" class="sidebar__social-link">
+                        <a href="#" data-description="Steam profile" class="sidebar__social-link">
                             <span class="sidebar__icon">
                                <i class="icon icon-steam"></i>
                             </span>
@@ -62,6 +62,7 @@
         </div>
     </aside>
     <main class="main">
+        <div class="description">text will be here</div>
         <div class="stars">
             <div class="stars__first"></div>
             <div class="stars__second"></div>
@@ -79,9 +80,16 @@
                                     data-text2="Привет! Меня зовут Дмитрий, я - Фронтенд разработчик">
                                 </h1>
                             </div>
-                            <div class="home__links">
+                            <div class="home__links"
+                                 data-animation="2"
+                                 data-path="small"
+                                 data-side="bottom">
                                 <div class="btn-animated">
-                                    <a href="#" data-text="Contact me"></a>
+                                    <a href="#"
+                                       data-action="scrollTo"
+                                       data-description="Go to contact form"
+                                       data-target="contact"
+                                       data-text="Contact me"></a>
                                 </div>
                             </div>
                         </div>
@@ -94,18 +102,41 @@
                 <div class="container">
                     <div class="about__inner">
                         <div class="about__title">
-                            <h1>About me</h1>
+                            <h1
+                                data-animation="1"
+                                data-path="small"
+                                data-side="bottom"
+                            >About me</h1>
                         </div>
                         <div class="about__text">
-                            <p>
+                            <p
+                                data-animation="1"
+                                data-path="small"
+                                data-side="bottom">
                                 I’m a Front-End Developer located in Russia, Volgograd.
+                            </p>
+                            <p
+                                data-animation="1"
+                                data-path="small"
+                                data-side="bottom">
                                 I've been doing frontend development for over a year.
                             </p>
-                            <p>
-                                Well-organized person with great attention to detail. Fan of TV series,
-                                basketball and gym activities
+                            <p
+                                data-animation="1"
+                                data-path="small"
+                                data-side="bottom">
+                                Well-organized person with great attention to detail.
                             </p>
-                            <p>
+                            <p
+                                data-animation="1"
+                                data-path="small"
+                                data-side="bottom">
+                                Fan of TV series, basketball and gym activities
+                            </p>
+                            <p
+                                data-animation="1"
+                                data-path="small"
+                                data-side="bottom">
                                 I like to solve interesting problems and learn very quickly
                             </p>
                         </div>
@@ -118,12 +149,12 @@
                 <div class="container">
                     <div class="work__inner">
                         <div class="work__title">
-                            <h1>My works</h1>
+                            <h1 data-animation="1" data-side="bottom" data-path="small">My works</h1>
                             <p>Will be soon</p>
                         </div>
                         <div class="work__grid-wrapper">
                             <div class="work-grid">
-                                <div class="work-grid__item">
+                                <div class="work-grid__item" data-animation="1" data-side="left" data-path="long">
                                     <div class="work-card">
                                         <div class="work-card__image">
                                             <img class="image" src="assets/img/me.jpg" alt="img">
@@ -144,7 +175,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="work-grid__item">
+                                <div class="work-grid__item" data-animation="1" data-side="left" data-path="long">
                                     <div class="work-card">
                                         <div class="work-card__image">
                                             <img class="image" src="assets/img/me.jpg" alt="img">
@@ -165,7 +196,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="work-grid__item">
+                                <div class="work-grid__item" data-animation="1" data-side="right" data-path="long">
                                     <div class="work-card">
                                         <div class="work-card__image">
                                             <img class="image" src="assets/img/me.jpg" alt="img">
@@ -186,7 +217,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="work-grid__item">
+                                <div class="work-grid__item" data-animation="1" data-side="left" data-path="long">
                                     <div class="work-card">
                                         <div class="work-card__image">
                                             <img class="image" src="assets/img/me.jpg" alt="img">
@@ -207,7 +238,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="work-grid__item">
+                                <div class="work-grid__item" data-animation="1" data-side="left" data-path="long">
                                     <div class="work-card">
                                         <div class="work-card__image">
                                             <img class="image" src="assets/img/me.jpg" alt="img">
@@ -339,35 +370,37 @@
                 <div class="container">
                     <div class="contact__inner">
                         <div class="contact__title">
-                            <h1>Contact</h1>
+                            <h1 data-animation="1" data-side="bottom" data-path="small">Contact</h1>
                         </div>
-                        <div class="contact__form">
-                            <form action="" class="form">
-                                <div class="form__item">
-                                    <input type="text"
-                                           data-input="name"
-                                           data-target="field"
-                                           required
-                                           id="name"
-                                           class="form__input input">
-                                    <label for="name" class="form__label">Name</label>
-                                    <div class="form__validate-icon">
-                                        <i class="icon icon-notification"></i>
-                                    </div>
-                                </div>
-                                <div class="form__item">
-                                    <input type="text"
-                                           data-input="email"
-                                           data-target="field"
-                                           required
-                                           id="email"
-                                           class="form__input input">
-                                    <label for="email" class="form__label">Email</label>
-                                    <div class="form__validate-icon">
-                                        <i class="icon icon-notification"></i>
-                                    </div>
-                                </div>
-                                <div class="form__item">
+                        <div class="contact__row">
+                            <div class="contact__col" data-animation="1" data-side="left" data-path="long">
+                                <div class="contact__form">
+                                    <form action="" class="form">
+                                        <div class="form__item">
+                                            <input type="text"
+                                                   data-input="name"
+                                                   data-target="field"
+                                                   required
+                                                   id="name"
+                                                   class="form__input input">
+                                            <label for="name" class="form__label">Name</label>
+                                            <div class="form__validate-icon" data-description="The name must not consist of less than 3 characters">
+                                                <i class="icon icon-notification"></i>
+                                            </div>
+                                        </div>
+                                        <div class="form__item">
+                                            <input type="text"
+                                                   data-input="email"
+                                                   data-target="field"
+                                                   required
+                                                   id="email"
+                                                   class="form__input input">
+                                            <label for="email" class="form__label">Email</label>
+                                            <div class="form__validate-icon" data-description="Please enter valid Email">
+                                                <i class="icon icon-notification"></i>
+                                            </div>
+                                        </div>
+                                        <div class="form__item">
                                     <textarea
                                             id="message"
                                             data-input="message"
@@ -375,17 +408,117 @@
                                             required
                                             rows="5"
                                             class="form__textarea textarea"></textarea>
-                                    <label for="message" class="form__label">Message</label>
-                                    <div class="form__validate-icon">
-                                        <i class="icon icon-notification"></i>
+                                            <label for="message" class="form__label">Message</label>
+                                            <div class="form__validate-icon" data-description="The message must not consist of less than 3 characters ">
+                                                <i class="icon icon-notification"></i>
+                                            </div>
+                                        </div>
+                                        <div class="form__control">
+                                            <div class="btn-animated">
+                                                <a href="#" data-action="send" data-text="Send"></a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="contact__col" data-animation="1" data-side="right" data-path="long">
+                                <div class="contact__animation">
+                                    <div class="contact-animation">
+                                        <div class="contact-animation__cube"></div>
+                                        <div class="contact-animation__cube"></div>
+                                        <div class="contact-animation__cube"></div>
+                                        <div class="contact-animation__cube"></div>
                                     </div>
                                 </div>
-                                <div class="form__control">
-                                    <div class="btn-animated">
-                                        <a href="#" data-action="send" data-text="Send"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="cats">
+            <div class="cats">
+                <div class="container">
+                    <div class="cats__inner">
+                        <div class="cats__title">
+                            <h1 data-animation="1" data-side="bottom" data-path="small">Cats?</h1>
+                        </div>
+                        <div class="cats__swiper" data-animation="1">
+                            <div class="swiper cool-swiper cool-swiper_height"
+                                 data-overflow="hidden"
+                                 data-pagination="true"
+                                 data-loop="true"
+                                 data-autoplay="true"
+                                 data-lazy="true"
+                                 data-slides="3"
+                                 data-centered="true"
+                            >
+                                <div class="swiper-wrapper">
+                                    <div class="cool-swiper__slide swiper-slide">
+                                        <div class="cat-card">
+                                            <img alt="" data-src="assets/img/cat1.jpg" class="image swiper-lazy">
+                                        </div>
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                    </div>
+                                    <div class="cool-swiper__slide swiper-slide">
+                                        <div class="cat-card">
+                                            <img alt="" data-src="assets/img/cat2.jpg" class="image swiper-lazy">
+                                        </div>
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                    </div>
+                                    <div class="cool-swiper__slide swiper-slide">
+                                        <div class="cat-card">
+                                            <img alt="" data-src="assets/img/cat3.jpg" class="image swiper-lazy">
+                                        </div>
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                    </div>
+                                    <div class="cool-swiper__slide swiper-slide">
+                                        <div class="cat-card">
+                                            <img alt="" data-src="assets/img/cat4.jpg" class="image swiper-lazy">
+                                        </div>
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                    </div>
+                                    <div class="cool-swiper__slide swiper-slide">
+                                        <div class="cat-card">
+                                            <img alt="" data-src="assets/img/cat5.jpg" class="image swiper-lazy">
+                                        </div>
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                    </div>
+                                    <div class="cool-swiper__slide swiper-slide">
+                                        <div class="cat-card">
+                                            <img alt="" data-src="assets/img/cat6.jpg" class="image swiper-lazy">
+                                        </div>
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                    </div>
+                                    <div class="cool-swiper__slide swiper-slide">
+                                        <div class="cat-card">
+                                            <img alt="" data-src="assets/img/cat7.jpg" class="image swiper-lazy">
+                                        </div>
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                    </div>
+                                    <div class="cool-swiper__slide swiper-slide">
+                                        <div class="cat-card">
+                                            <img alt="" data-src="assets/img/cat8.jpg" class="image swiper-lazy">
+                                        </div>
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                    </div>
+                                    <div class="cool-swiper__slide swiper-slide">
+                                        <div class="cat-card">
+                                            <img alt="" data-src="assets/img/cat9.jpg" class="image swiper-lazy">
+                                        </div>
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                    </div>
+                                    <div class="cool-swiper__slide swiper-slide">
+                                        <div class="cat-card">
+                                            <img alt="" data-src="assets/img/cat10.jpg" class="image swiper-lazy">
+                                        </div>
+                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                                     </div>
                                 </div>
-                            </form>
+                                <div class="cool-swiper__control cool-swiper__control_bottom swiper-button-next"></div>
+                                <div class="cool-swiper__control cool-swiper__control_bottom swiper-button-prev"></div>
+                                <div class="cool-swiper__pagination swiper-pagination"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

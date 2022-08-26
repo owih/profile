@@ -1,0 +1,29 @@
+.cats {
+  height: 100%;
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    justify-content: center;
+  }
+  &__title {
+    padding-bottom: 30px;
+  }
+  .cats__swiper {
+    align-self: center;
+    max-width: 300px;
+    @include media-breakpoint-up(sm) {
+      max-width: 300px;
+      max-height: 500px;
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: 700px;
+      max-height: 800px;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 900px;
+      max-height: 800px;
+    }
+  }
+}
