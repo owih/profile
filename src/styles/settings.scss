@@ -40,6 +40,10 @@ body.light {
   flex-grow: 1;
   position: relative;
 }
+.icon {
+  pointer-events: none;
+  display: flex;
+}
 .wrapper {
   display: flex;
   flex-grow: 1;
@@ -51,8 +55,9 @@ body.light {
 .section {
   height: 100vh;
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   position: relative;
+  overflow: hidden;
   &_hidden {
     opacity: 0;
     margin-right: $scrollbar-width;

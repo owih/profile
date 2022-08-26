@@ -25,11 +25,13 @@
       &~.form__validate-icon {
         right: 10px;
         opacity: 1;
+        z-index: 0;
       }
     }
   }
   &__validate-icon {
     position: absolute;
+    z-index: -1;
     right: -6px;
     top: 10px;
     color: $yellow;

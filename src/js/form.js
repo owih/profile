@@ -100,9 +100,6 @@ export default class Form {
 		} else {
 			this.deleteFromArrayOfUnvalidateFields(item);
 		}
-
-		console.log(this.unvalidatedFields)
-		console.log(this.isValidated)
 	}
 
 	deleteFromArrayOfUnvalidateFields(field) {

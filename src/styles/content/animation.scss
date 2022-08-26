@@ -1,0 +1,28 @@
+[data-animation="0"].animated {
+  transition: $transition-timeout;
+  opacity: 1;
+  transform: translate(0, 0);
+}
+[data-animation="1"].animated {
+  transition: $transition-timeout-sm !important;
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+[data-animation="2"].animated {
+  transition: $transition-timeout-md !important;
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+
+[data-animation] {
+  opacity: 0;
+  &[data-side="bottom"][data-path="small"] {
+    transform: translateY(100%);
+  }
+  &[data-side="left"][data-path="long"] {
+    transform: translateX(-100px);
+  }
+  &[data-side="right"][data-path="long"] {
+    transform: translateX(100px);
+  }
+}
