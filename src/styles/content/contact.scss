@@ -8,11 +8,24 @@
     justify-content: center;
   }
   &__form {
-    @include media-breakpoint-up(lg) {
-      width: 50%;
-    }
   }
   &__title {
     margin-bottom: 20px;
+  }
+  &__row {
+    display: flex;
+  }
+  &__col {
+    flex: 1 0 50%;
+    &:last-child {
+      display: none;
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+  }
+  &__animation {
+    position: relative;
+    height: 100%;
   }
 }
