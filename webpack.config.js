@@ -148,6 +148,13 @@ module.exports = {
         generator: {
           filename: 'assets/img/[name][ext]'
         },
+      },
+      {
+        test: /\.ico$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'src/[name][ext]'
+        },
       }
     ]
   }
