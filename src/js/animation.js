@@ -2,7 +2,6 @@ export default class Animation {
 	constructor(block) {
 		this.block = block;
 		this.timeout = this.block.dataset.animation;
-		console.log(this.timeout)
 		this.options = {
 			root: null,
 			rootMargin: '0px',
@@ -13,7 +12,6 @@ export default class Animation {
 	}
 
 	init() {
-		console.log(this.block)
 		this.createObserver();
 		this.setObserve();
 	}
