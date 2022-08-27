@@ -20,6 +20,7 @@
   &__swiper-wrapper {
     transition: $transition-base;
     max-width: 268px;
+    max-height: 400px;
     @include media-breakpoint-up(sm) {
       max-width: 400px;
     };

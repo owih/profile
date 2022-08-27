@@ -1,9 +1,8 @@
 .input,
 .textarea {
   width: 100%;
-  border: none;
   outline: none;
-  box-shadow: 0 0 0 2px var(--input-box-shadow-color);
+  border: 2px solid var(--input-box-shadow-color);
   padding: 10px 40px 8px 12px;
   resize: none;
   background-color: transparent;
