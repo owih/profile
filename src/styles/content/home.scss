@@ -19,6 +19,7 @@
   &__title {
     margin-bottom: 16px;
     transition: $transition-base;
+    min-height: 125px;
     @include media-breakpoint-up(md) {
       width: 500px;
       min-height: 143px;

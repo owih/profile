@@ -4,7 +4,7 @@
     position: relative;
   }
   &__label {
-    transition: $transition-base;
+    transition: left 0.2s ease-in-out, transform 0.2s ease-in-out, top 0.2s ease-in-out, position 0.2s ease-in-out;
     position: absolute;
     left: 16px;
     top: 50%;
@@ -13,7 +13,6 @@
   &__input {
     &:focus, &:valid {
       outline: 0;
-      border-bottom-color: #6658d3;
       &+.form__label {
         top: -12px;
         left: 0;
@@ -21,7 +20,7 @@
       }
     }
     &_error {
-      box-shadow: 0 0 0 2px $danger;
+      border: 2px solid $danger;
       &~.form__validate-icon {
         right: 10px;
         opacity: 1;
@@ -44,7 +43,6 @@
     }
     &:focus, &:valid {
       outline: 0;
-      border-bottom-color: #6658d3;
       &+.form__label {
         top: -12px;
         left: 0;
