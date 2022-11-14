@@ -8,6 +8,7 @@ import CoolSwiper from "./cool-swiper";
 import Form from "./form";
 import Description from "./description";
 import Animation from "./animation";
+import WorkGrid from "./work-grid";
 
 document.addEventListener('DOMContentLoaded', () => {
   [...document.getElementsByClassName('sidebar')].forEach((item) => new Sidebar(item));
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   [...document.getElementsByClassName('section')].forEach((item) => new Section(item));
   [...document.getElementsByClassName('cool-swiper')].forEach((item) => new CoolSwiper(item));
   [...document.getElementsByClassName('form')].forEach((item) => new Form(item));
+  [...document.getElementsByClassName('work-grid')].forEach((item) => new WorkGrid(item));
   [...document.querySelectorAll('[data-description]')].forEach((item) => new Description(item));
   [...document.querySelectorAll('[data-animation]')].forEach((item) => new Animation(item));
 })
