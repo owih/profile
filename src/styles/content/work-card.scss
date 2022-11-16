@@ -47,7 +47,7 @@
       &:after {
         left: -100%;
       }
-      transform: scale(1.1);
+      transform: scale(1.06);
     }
   }
   &__links {
@@ -57,7 +57,6 @@
   }
   &__additional {
     padding: 8px;
-    transition: $transition-base;
     position: absolute;
     bottom: 18px;
     left: 50%;

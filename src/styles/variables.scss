@@ -85,6 +85,7 @@ $headings-font-family: 'ActayBold', 'sans-serif';
 
 // Transition
 $transition-base:            all .2s ease-in-out;
+$transition-small:            all .1s ease-in-out;
 $transition-timeout:              opacity .2s ease-in-out, transform .2s ease-in-out;
 $transition-timeout-sm:           opacity .2s ease-in-out 0.3s, transform .2s ease-in-out 0.3s;
 $transition-timeout-md:           opacity .2s ease-in-out 1s, transform .2s ease-in-out 1s;
