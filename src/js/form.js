@@ -1,4 +1,4 @@
-// TODO: loading screen while sending data, finished form sending with phpmailer(?)
+// TODO: loading screen while sending data, finished form sending
 
 const Selectors = {
 	CONTROL: '[data-action="send"]',
