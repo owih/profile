@@ -10,6 +10,7 @@ export type IconsId =
   | "home"
   | "html-five"
   | "laptop"
+  | "mail"
   | "mobile"
   | "notification"
   | "steam"
@@ -30,6 +31,7 @@ export type IconsKey =
   | "Home"
   | "HtmlFive"
   | "Laptop"
+  | "Mail"
   | "Mobile"
   | "Notification"
   | "Steam"
@@ -50,6 +52,7 @@ export enum Icons {
   Home = "home",
   HtmlFive = "html-five",
   Laptop = "laptop",
+  Mail = "mail",
   Mobile = "mobile",
   Notification = "notification",
   Steam = "steam",
@@ -71,11 +74,12 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.Home]: "61705",
   [Icons.HtmlFive]: "61706",
   [Icons.Laptop]: "61707",
-  [Icons.Mobile]: "61708",
-  [Icons.Notification]: "61709",
-  [Icons.Steam]: "61710",
-  [Icons.Telegram]: "61711",
-  [Icons.Terminal]: "61712",
-  [Icons.Translate]: "61713",
-  [Icons.User]: "61714",
+  [Icons.Mail]: "61708",
+  [Icons.Mobile]: "61709",
+  [Icons.Notification]: "61710",
+  [Icons.Steam]: "61711",
+  [Icons.Telegram]: "61712",
+  [Icons.Terminal]: "61713",
+  [Icons.Translate]: "61714",
+  [Icons.User]: "61715",
 };
