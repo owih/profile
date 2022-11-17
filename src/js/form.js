@@ -26,10 +26,12 @@ export default class Form {
 
 	init() {
 		this.sendControl.addEventListener('click', this.clickControlHandler);
-	}
+    this.block.addEventListener('submit', this.clickControlHandler);
+  }
 
 	clickControlHandler(event) {
-		event.preventDefault();
+    console.log('submit')
+    event.preventDefault();
 		this.doValidate();
 		if (this.isValidated) this.sendData();
 	}
@@ -45,9 +47,12 @@ export default class Form {
 			.then((data) => {
 				if (data.ok) this.dataProcess(data);
 			})
+      // Doing nothing because we cant process the http requests inside current website host
+      .finally(() => alert('Form temporary not working, because website host is Github pages ;('))
 	}
 
 	dataProcess(data) {
+    console.log('data')
 		this.block.reset;
 		this.block.classList.remove(Classes.SENDING);
 	}

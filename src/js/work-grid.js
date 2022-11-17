@@ -1,12 +1,13 @@
 const Classes = {
   ITEM: 'work-grid__item',
   CARD: 'work-card',
-  LINK: 'work-card__link'
+  LINK: 'work-card__link',
 }
 
 const Attributes = {
   GRID_ITEM: 'data-grid-item',
-  TARGET_NUM: 'data-target-num'
+  TARGET_NUM: 'data-target-num',
+  SWAP_SRC: 'data-swap-src',
 }
 
 export default class WorkGrid {
@@ -32,13 +33,28 @@ export default class WorkGrid {
   }
 
   rebuildItemsArray(target) {
-    let swapTargetItem = null;
+    let isCardFound = false;
     this.items.forEach((item, index) => {
-      if (item === target.closest('.' + Classes.ITEM)) swapTargetItem = index;
+      if (item === target.closest('.' + Classes.ITEM) && !isCardFound) {
+        isCardFound = true;
+        const imageElemNext = item.querySelector('.image');
+        this.swapImageSrc(imageElemNext);
+
+        const temp = this.items[index]
+        this.items[index] = this.items[this.targetItemNum]
+        this.items[this.targetItemNum] = temp;
+        const imageElemPrev = this.items[index].querySelector('.image');
+        this.swapImageSrc(imageElemPrev);
+      }
     });
-    const temp = this.items[swapTargetItem]
-    this.items[swapTargetItem] = this.items[this.targetItemNum]
-    this.items[this.targetItemNum] = temp;
+  }
+
+  swapImageSrc(item) {
+    console.log(item)
+    const targetSrc = item.getAttribute(Attributes.SWAP_SRC);
+    const srcToSwap = item.getAttribute('src');
+    item.setAttribute('src', targetSrc);
+    item.setAttribute(Attributes.SWAP_SRC, srcToSwap);
   }
 
   replaceItems() {

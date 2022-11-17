@@ -17,6 +17,12 @@
       display: block;
     };
   }
+  &__subtitle {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
   &__swiper-wrapper {
     transition: $transition-base;
     max-width: 268px;

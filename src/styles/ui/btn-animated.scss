@@ -5,17 +5,24 @@
   min-height: 55px;
   perspective: 1000px;
 }
-.btn-animated a{
+.btn-animated a, .btn-animated button {
   font-size: 19px;
   letter-spacing: 1px;
   transform-style: preserve-3d;
   transform: translateZ(-25px);
   transition: transform .25s;
   font-family: 'Montserrat', sans-serif;
+  border: none;
+  outline: none;
+  padding: 0;
+  display: inherit;
+  cursor: pointer;
 
 }
 .btn-animated a:before,
-.btn-animated a:after{
+.btn-animated a:after,
+.btn-animated button:before,
+.btn-animated button:after {
   position: absolute;
   content: attr(data-text);
   height: 55px;
@@ -28,17 +35,20 @@
   box-sizing: border-box;
   border-radius: 5px;
 }
-.btn-animated a:before{
+.btn-animated a:before,
+.btn-animated button:before {
   color: var(--themecolor);
   background: var(--themetoggle);
   transition: $transition-base;
   transform: rotateY(0deg) translateZ(25px);
 }
-.btn-animated a:after{
+.btn-animated a:after,
+.btn-animated button:after {
   color: var(--themetoggle);
   transform: rotateX(90deg) translateZ(25px);
   transition: color 0.2s ease-in-out;
 }
-.btn-animated a:hover{
+.btn-animated a:hover,
+.btn-animated button:hover {
   transform: translateZ(-25px) rotateX(-90deg);
 }

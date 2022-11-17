@@ -1,0 +1,25 @@
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+
+  @include media-breakpoint-up(lg) {
+    grid-template-rows: minmax(180px, 1fr) 1fr;
+  }
+  @include media-breakpoint-up(xl) {
+    grid-template-rows: minmax(250px, 1fr) 1fr;
+  }
+  @include media-breakpoint-up(xxl) {
+    grid-template-rows: minmax(270px, 1fr) 1fr;
+  }
+
+  gap: 30px;
+  &__item {
+    &:nth-child(3) {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+  }
+}
