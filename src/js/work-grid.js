@@ -50,7 +50,6 @@ export default class WorkGrid {
   }
 
   swapImageSrc(item) {
-    console.log(item)
     const targetSrc = item.getAttribute(Attributes.SWAP_SRC);
     const srcToSwap = item.getAttribute('src');
     item.setAttribute('src', targetSrc);

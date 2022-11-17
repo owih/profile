@@ -9,7 +9,6 @@ export default class AboutSlider {
   constructor(block) {
     this.block = block;
     this.paginationTitles = this.block.querySelectorAll('[data-pagination]');
-    console.log(this.block)
 
     this.init();
   }

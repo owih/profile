@@ -30,7 +30,6 @@ export default class Form {
   }
 
 	clickControlHandler(event) {
-    console.log('submit')
     event.preventDefault();
 		this.doValidate();
 		if (this.isValidated) this.sendData();
@@ -51,8 +50,7 @@ export default class Form {
       .finally(() => alert('Form temporary not working, because website host is Github pages ;('))
 	}
 
-	dataProcess(data) {
-    console.log('data')
+	dataProcess() {
 		this.block.reset;
 		this.block.classList.remove(Classes.SENDING);
 	}
