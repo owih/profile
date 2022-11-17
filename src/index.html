@@ -22,7 +22,7 @@
                 <ul class="sidebar__list">
                     <li class="sidebar__item"><a href="#home" data-description="Scroll to home page" data-action="scrollTo" data-target="home" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-home"></i></span><span class="sidebar__text-hidden">Home</span></a></li>
                     <li class="sidebar__item"><a href="#about" data-description="About me" data-action="scrollTo" data-target="about" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-user"></i></span><span class="sidebar__text-hidden">About</span></a></li>
-                    <li class="sidebar__item"><a href="#work" data-description="Portfolio (Soon)" data-action="scrollTo" data-target="work" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-drawer"></i></span><span class="sidebar__text-hidden">Work</span></a></li>
+                    <li class="sidebar__item"><a href="#work" data-description="Portfolio" data-action="scrollTo" data-target="work" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-drawer"></i></span><span class="sidebar__text-hidden">Work</span></a></li>
                     <li class="sidebar__item"><a href="#contact" data-description="Send mail" data-action="scrollTo" data-target="contact" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-bubbles"></i></span><span class="sidebar__text-hidden">Contact</span></a></li>
                     <li class="sidebar__item"><a href="#cats" data-description="Some cats?" data-action="scrollTo" data-target="cats" class="sidebar__link"><span class="sidebar__icon"><i class="icon icon-github icon-bg"></i></span><span class="sidebar__text-hidden">Cats?</span></a></li>
                 </ul>
@@ -98,51 +98,165 @@
                 </div>
             </div>
         </section>
-        <section class="section" id="about">
-            <div class="about">
-                <div class="container">
-                    <div class="about__inner">
-                        <div class="about__title">
-                            <h1
-                                data-animation="1"
-                                data-path="small"
-                                data-side="bottom"
-                            >About me</h1>
+        <section class="section section_flex" id="about">
+            <div class="swiper about-slider">
+                <div class="swiper-wrapper about-slider__wrapper">
+                    <div class="swiper-slide about-slider__slide" data-pagination="About me">
+                        <div class="about">
+                            <div class="container">
+                                <div class="about__inner">
+                                    <div class="about__title">
+                                        <h1
+                                            data-animation="1"
+                                            data-path="small"
+                                            data-side="bottom"
+                                        >About me</h1>
+                                    </div>
+                                    <div class="about__text about__text_big">
+                                        <p
+                                            class="about__paragraph"
+                                            data-animation="1"
+                                            data-path="small"
+                                            data-side="bottom">
+                                            I’m a 21-year-old <span class="about__highlight">frontend developer</span> located in Russia
+                                        </p>
+                                        <p
+                                            class="about__paragraph"
+                                            data-animation="1"
+                                            data-path="small"
+                                            data-side="bottom">
+                                            I've been doing frontend development for <span class="about__highlight">over a year and a half</span>
+                                        </p>
+                                        <p
+                                            class="about__paragraph"
+                                            data-animation="1"
+                                            data-path="small"
+                                            data-side="bottom">
+                                            Well-<span class="about__highlight">organized</span> person with great <span class="about__highlight">attention to detail</span>
+                                        </p>
+                                        <p
+                                            class="about__paragraph"
+                                            data-animation="1"
+                                            data-path="small"
+                                            data-side="bottom">
+                                            Fan of TV series, <span class="about__highlight">basketball</span> and gym <span class="about__highlight">activities</span>
+                                        </p>
+                                        <p
+                                            class="about__paragraph"
+                                            data-animation="1"
+                                            data-path="small"
+                                            data-side="bottom">
+                                            I like to solve <span class="about__highlight">interesting problems</span> and <span class="about__highlight">learn very quickly</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="about__text">
-                            <p
-                                data-animation="1"
-                                data-path="small"
-                                data-side="bottom">
-                                I’m a Front-End Developer located in Russia.
-                            </p>
-                            <p
-                                data-animation="1"
-                                data-path="small"
-                                data-side="bottom">
-                                I've been doing frontend development for over a year.
-                            </p>
-                            <p
-                                data-animation="1"
-                                data-path="small"
-                                data-side="bottom">
-                                Well-organized person with great attention to detail.
-                            </p>
-                            <p
-                                data-animation="1"
-                                data-path="small"
-                                data-side="bottom">
-                                Fan of TV series, basketball and gym activities
-                            </p>
-                            <p
-                                data-animation="1"
-                                data-path="small"
-                                data-side="bottom">
-                                I like to solve interesting problems and learn very quickly
-                            </p>
+                    </div>
+                    <div class="swiper-slide about-slider__slide" data-pagination="Skills">
+                        <div class="about">
+                            <div class="container">
+                                <div class="about__inner">
+                                    <div class="about__title">
+                                        <h1>Skills</h1>
+                                    </div>
+                                    <div class="about__row">
+                                        <div class="about__item">
+                                            <h6 class="about__subtitle">HTML 5</h6>
+                                            <div class="about__text">
+                                                <p class="about__paragraph about__paragraph_inlined">BEM methodology</p>
+                                                <p class="about__paragraph about__paragraph_inlined"><span class="about__highlight">BEM.JS template</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="about__item">
+                                            <h6 class="about__subtitle">CSS</h6>
+                                            <div class="about__text">
+                                                <p class="about__paragraph about__paragraph_inlined"><span class="about__highlight">SASS/SCSS</span></p>
+                                                <p class="about__paragraph about__paragraph_inlined"><span class="about__highlight">Responsive Design</span></p>
+                                                <p class="about__paragraph about__paragraph_inlined">Mobile first development</p>
+                                                <p class="about__paragraph about__paragraph_inlined">Bootstrap</p>
+                                                <p class="about__paragraph about__paragraph_inlined">Cross-Browser Compatibility</p>
+                                            </div>
+                                        </div>
+                                        <div class="about__item">
+                                            <h6 class="about__subtitle">JavaScript</h6>
+                                            <div class="about__text">
+                                                <p class="about__paragraph about__paragraph_inlined">ECMAScript 6+</p>
+                                                <p class="about__paragraph about__paragraph_inlined"><span class="about__highlight">Vue 3</span></p>
+                                                <p class="about__paragraph about__paragraph_inlined">Vuex/Pinia store</p>
+                                                <p class="about__paragraph about__paragraph_inlined">Option/Composition API</p>
+                                                <p class="about__paragraph about__paragraph_inlined"><span class="about__highlight">TypeScript (basics)</span></p>
+                                                <p class="about__paragraph about__paragraph_inlined">Vue-router</p>
+                                            </div>
+                                        </div>
+                                        <div class="about__item">
+                                            <h6 class="about__subtitle">NodeJS</h6>
+                                            <div class="about__text">
+                                                <p class="about__paragraph about__paragraph_inlined"><span class="about__highlight">Express (basics)</span></p>
+                                                <p class="about__paragraph about__paragraph_inlined">PostgreSQL (basics)</p>
+                                            </div>
+                                        </div>
+                                        <div class="about__item">
+                                            <h6 class="about__subtitle">Tools</h6>
+                                            <div class="about__text">
+                                                <p class="about__paragraph about__paragraph_inlined"><span class="about__highlight">Git/Gitflow/Github</span></p>
+                                                <p class="about__paragraph about__paragraph_inlined"><span class="about__highlight">Figma</span></p>
+                                                <p class="about__paragraph about__paragraph_inlined">Photoshop (basics)</p>
+                                                <p class="about__paragraph about__paragraph_inlined"><span class="about__highlight">API</span></p>
+                                                <p class="about__paragraph about__paragraph_inlined">HTTP</p>
+                                                <p class="about__paragraph about__paragraph_inlined">DevTools</p>
+                                                <p class="about__paragraph about__paragraph_inlined">NPM</p>
+                                                <p class="about__paragraph about__paragraph_inlined">Webpack</p>
+                                            </div>
+                                        </div>
+                                        <div class="about__item">
+                                            <h6 class="about__subtitle">Soft skills</h6>
+                                            <div class="about__text">
+                                                <p class="about__paragraph about__paragraph_inlined"><span class="about__highlight">English B1</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide about-slider__slide" data-pagination="Work experience">
+                        <div class="about">
+                            <div class="container">
+                                <div class="about__inner">
+                                    <div class="about__title">
+                                        <h1>Work experience</h1>
+                                    </div>
+                                    <div class="about__text about__text_big">
+                                        <p class="about__paragraph">Before applying for a job, I studied <span class="about__highlight">web development</span> on my own for
+                                            <span class="about__highlight">3 months</span>,
+                                            after which I got into an excellent company <span class="about__highlight">Intervolga</span>, where I have been working
+                                            for <span class="about__highlight">more than a year</span> and got a huge amount of experience in <span class="about__highlight">development and teamwork</span>.
+                                            At work, I <span class="about__highlight">develop</span> pages from ready-made layouts, <span class="about__highlight">add</span> new features
+                                            to projects, <span class="about__highlight">fix</span> bugs, and so on...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide about-slider__slide" data-pagination="Education">
+                        <div class="about">
+                            <div class="container">
+                                <div class="about__inner">
+                                    <div class="about__title">
+                                        <h1>Education</h1>
+                                    </div>
+                                    <div class="about__text about__text_big">
+                                        <p class="about__paragraph">At the moment I am finishing my <span class="about__highlight">last year (4th)</span>
+                                            at the <span class="about__highlight">University of VSPU</span>
+                                            in the direction of <span class="about__highlight">"Applied Informatics"</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="swiper-pagination about-slider__pagination"></div>
             </div>
         </section>
         <section class="section" id="work">
@@ -178,12 +292,12 @@
                                         <div class="work-card__additional">
                                             <div class="work-card__links">
                                                 <div class="work-card__links-item">
-                                                    <a href="#" class="work-card__link">
+                                                    <a href="https://owih.github.io/pinia-ts-crypto/" class="work-card__link" target="_blank">
                                                         <i class="icon icon-display"></i>
                                                     </a>
                                                 </div>
                                                 <div class="work-card__links-item">
-                                                    <a href="#" class="work-card__link">
+                                                    <a href="https://github.com/owih/pinia-ts-crypto" class="work-card__link" target="_blank">
                                                         <i class="icon icon-github"></i>
                                                     </a>
                                                 </div>
@@ -209,12 +323,12 @@
                                         <div class="work-card__additional">
                                             <div class="work-card__links">
                                                 <div class="work-card__links-item">
-                                                    <a href="#" class="work-card__link">
+                                                    <a href="https://owih.github.io/mira-yumaeva/" class="work-card__link" target="_blank">
                                                         <i class="icon icon-display"></i>
                                                     </a>
                                                 </div>
                                                 <div class="work-card__links-item">
-                                                    <a href="#" class="work-card__link">
+                                                    <a href="https://github.com/owih/mira-yumaeva" class="work-card__link" target="_blank">
                                                         <i class="icon icon-github"></i>
                                                     </a>
                                                 </div>
@@ -245,12 +359,12 @@
                                         <div class="work-card__additional">
                                             <div class="work-card__links">
                                                 <div class="work-card__links-item">
-                                                    <a href="#" class="work-card__link">
+                                                    <a href="#" class="work-card__link work-card__link_disabled">
                                                         <i class="icon icon-display"></i>
                                                     </a>
                                                 </div>
                                                 <div class="work-card__links-item">
-                                                    <a href="#" class="work-card__link">
+                                                    <a href="https://github.com/owih/fullstack-app" class="work-card__link" target="_blank" data-description="Only github">
                                                         <i class="icon icon-github"></i>
                                                     </a>
                                                 </div>
@@ -276,12 +390,12 @@
                                         <div class="work-card__additional">
                                             <div class="work-card__links">
                                                 <div class="work-card__links-item">
-                                                    <a href="#" class="work-card__link">
+                                                    <a href="https://owih.github.io/vue-collection/" class="work-card__link" target="_blank">
                                                         <i class="icon icon-display"></i>
                                                     </a>
                                                 </div>
                                                 <div class="work-card__links-item">
-                                                    <a href="#" class="work-card__link">
+                                                    <a href="https://github.com/owih/vue-collection" class="work-card__link" target="_blank">
                                                         <i class="icon icon-github"></i>
                                                     </a>
                                                 </div>
@@ -308,12 +422,12 @@
                                         <div class="work-card__additional">
                                             <div class="work-card__links">
                                                 <div class="work-card__links-item">
-                                                    <a href="#" class="work-card__link">
+                                                    <a href="https://owih.github.io/vuex-shop/" class="work-card__link" target="_blank">
                                                         <i class="icon icon-display"></i>
                                                     </a>
                                                 </div>
                                                 <div class="work-card__links-item">
-                                                    <a href="#" class="work-card__link">
+                                                    <a href="https://github.com/owih/vuex-shop" class="work-card__link" target="_blank">
                                                         <i class="icon icon-github"></i>
                                                     </a>
                                                 </div>
@@ -335,12 +449,12 @@
                                                 <div class="work-card__additional">
                                                     <div class="work-card__links">
                                                         <div class="work-card__links-item">
-                                                            <a href="#" class="work-card__link">
+                                                            <a href="https://owih.github.io/pinia-ts-crypto/" class="work-card__link" target="_blank">
                                                                 <i class="icon icon-display"></i>
                                                             </a>
                                                         </div>
                                                         <div class="work-card__links-item">
-                                                            <a href="#" class="work-card__link">
+                                                            <a href="https://github.com/owih/pinia-ts-crypto" class="work-card__link" target="_blank">
                                                                 <i class="icon icon-github"></i>
                                                             </a>
                                                         </div>
@@ -358,12 +472,12 @@
                                                 <div class="work-card__additional">
                                                     <div class="work-card__links">
                                                         <div class="work-card__links-item">
-                                                            <a href="#" class="work-card__link">
+                                                            <a href="https://owih.github.io/mira-yumaeva/" class="work-card__link" target="_blank">
                                                                 <i class="icon icon-display"></i>
                                                             </a>
                                                         </div>
                                                         <div class="work-card__links-item">
-                                                            <a href="#" class="work-card__link">
+                                                            <a href="https://github.com/owih/mira-yumaeva" class="work-card__link" target="_blank">
                                                                 <i class="icon icon-github"></i>
                                                             </a>
                                                         </div>
@@ -381,12 +495,12 @@
                                                 <div class="work-card__additional">
                                                     <div class="work-card__links">
                                                         <div class="work-card__links-item">
-                                                            <a href="#" class="work-card__link">
+                                                            <a href="#" class="work-card__link work-card__link_disabled">
                                                                 <i class="icon icon-display"></i>
                                                             </a>
                                                         </div>
                                                         <div class="work-card__links-item">
-                                                            <a href="#" class="work-card__link">
+                                                            <a href="https://github.com/owih/fullstack-app" class="work-card__link" target="_blank" data-description="Only github">
                                                                 <i class="icon icon-github"></i>
                                                             </a>
                                                         </div>
@@ -404,12 +518,12 @@
                                                 <div class="work-card__additional">
                                                     <div class="work-card__links">
                                                         <div class="work-card__links-item">
-                                                            <a href="#" class="work-card__link">
+                                                            <a href="https://owih.github.io/vue-collection/" class="work-card__link" target="_blank">
                                                                 <i class="icon icon-display"></i>
                                                             </a>
                                                         </div>
                                                         <div class="work-card__links-item">
-                                                            <a href="#" class="work-card__link">
+                                                            <a href="https://github.com/owih/vue-collection" class="work-card__link" target="_blank">
                                                                 <i class="icon icon-github"></i>
                                                             </a>
                                                         </div>
@@ -427,12 +541,12 @@
                                                 <div class="work-card__additional">
                                                     <div class="work-card__links">
                                                         <div class="work-card__links-item">
-                                                            <a href="#" class="work-card__link">
+                                                            <a href="https://owih.github.io/vuex-shop/" class="work-card__link" target="_blank">
                                                                 <i class="icon icon-display"></i>
                                                             </a>
                                                         </div>
                                                         <div class="work-card__links-item">
-                                                            <a href="#" class="work-card__link">
+                                                            <a href="https://github.com/owih/vuex-shop" class="work-card__link" target="_blank">
                                                                 <i class="icon icon-github"></i>
                                                             </a>
                                                         </div>
@@ -498,9 +612,20 @@
                                                 <i class="icon icon-notification"></i>
                                             </div>
                                         </div>
-                                        <div class="form__control">
-                                            <div class="btn-animated">
-                                                <button type="submit" data-action="send" data-text="Send"></button>
+                                        <div class="form__bottom">
+                                            <div class="form__bottom-item">
+                                                <div class="form__control">
+                                                    <div class="btn-animated">
+                                                        <button type="submit" data-action="send" data-text="Send"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form__bottom-item">
+                                                <span>OR</span>
+                                            </div>
+                                            <div class="form__bottom-item">
+                                                <a class="form__icon-link" href="mailto:golovatenko.dmitry@mail.ru"><i class="icon icon-mail"></i></a>
+                                                <a class="form__icon-link" target="_blank" href="https://t.me/qekex"><i class="icon icon-telegram"></i></a>
                                             </div>
                                         </div>
                                     </form>

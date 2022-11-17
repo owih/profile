@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?dd8e2fdaa3fe0cd0a38b876e87968031#iefix") format("embedded-opentype"),
-url("./icons.woff2?dd8e2fdaa3fe0cd0a38b876e87968031") format("woff2"),
-url("./icons.woff?dd8e2fdaa3fe0cd0a38b876e87968031") format("woff");
+    src: url("./icons.eot?7a270255ecb58328753924b324c3e622#iefix") format("embedded-opentype"),
+url("./icons.woff2?7a270255ecb58328753924b324c3e622") format("woff2"),
+url("./icons.woff?7a270255ecb58328753924b324c3e622") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -49,24 +49,27 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-laptop:before {
     content: "\f10b";
 }
-.icon-mobile:before {
+.icon-mail:before {
     content: "\f10c";
 }
-.icon-notification:before {
+.icon-mobile:before {
     content: "\f10d";
 }
-.icon-steam:before {
+.icon-notification:before {
     content: "\f10e";
 }
-.icon-telegram:before {
+.icon-steam:before {
     content: "\f10f";
 }
-.icon-terminal:before {
+.icon-telegram:before {
     content: "\f110";
 }
-.icon-translate:before {
+.icon-terminal:before {
     content: "\f111";
 }
-.icon-user:before {
+.icon-translate:before {
     content: "\f112";
+}
+.icon-user:before {
+    content: "\f113";
 }

@@ -184,6 +184,10 @@ $max-works: 5;
       height: 40px;
       border-radius: 50%;
     }
+    &_disabled {
+      pointer-events: none;
+      color: $gray-700;
+    }
   }
   &__image {
     height: 100%;

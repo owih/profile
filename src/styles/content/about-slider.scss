@@ -1,0 +1,40 @@
+.about-slider {
+  margin: -60px 0;
+  padding: 60px 0;
+  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: auto;
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+    }
+  }
+  &__pagination {
+    position: static;
+    display: flex;
+    margin: -6px;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      padding-top: 24px;
+      text-align: left;
+      width: 100%;
+    }
+  }
+  &__pagination-item {
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 6px;
+    margin: 0 !important;
+    span {
+      display: inline-block;
+      border: 1px solid;
+      padding: 6px 8px 5px;
+    }
+    font-size: 14px;
+    @include media-breakpoint-up(lg) {
+      font-size: 18px;
+    }
+  }
+}

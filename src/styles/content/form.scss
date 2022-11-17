@@ -50,4 +50,25 @@
       }
     }
   }
+  &__bottom {
+    display: flex;
+    margin: -16px;
+    align-items: center;
+  }
+  &__bottom-item {
+    padding: 16px;
+    display: flex;
+  }
+  &__icon-link {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+    color: var(--themetoggle);
+    .icon {
+      font-size: 32px;
+    }
+  }
 }
