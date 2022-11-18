@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 5%;
     @include media-breakpoint-up(lg) {
       align-items: start;
       padding: 0 10%;

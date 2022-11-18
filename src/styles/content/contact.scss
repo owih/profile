@@ -2,10 +2,13 @@
   height: 100%;
   &__inner {
     height: 100%;
-    padding: 0 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 5%;
+    @include media-breakpoint-up(sm) {
+      padding: 0 10%;
+    }
   }
   &__form {
   }

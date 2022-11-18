@@ -1,7 +1,10 @@
 .about {
   height: 100%;
   &__inner {
-    padding: 0 10%;
+    padding: 0 5%;
+    @include media-breakpoint-up(sm) {
+      padding: 0 10%;
+    }
   }
   &__row {
     @include media-breakpoint-up(lg) {
