@@ -31,7 +31,7 @@ export default class Section {
   processImageLazy() {
     const prevSection = document.querySelector(`[data-section="${this.sectionNumber - 1}"]`);
     const nextSection = document.querySelector(`[data-section="${this.sectionNumber + 1}"]`);
-    const currentSection = this.block;
+    const currentSection = document.querySelector(`[data-section="${this.sectionNumber}"]`);;
     if (currentSection && !currentSection.getAttribute('data-loading')) {
       currentSection.setAttribute('data-loading', '');
       const imagesOnSection = currentSection.querySelectorAll('[data-lazy-src]');
