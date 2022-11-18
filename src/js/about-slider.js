@@ -9,12 +9,14 @@ export default class AboutSlider {
   constructor(block) {
     this.block = block;
     this.paginationTitles = this.block.querySelectorAll('[data-pagination]');
+    this.initialSlide = Number(this.block.getAttribute('data-active-slide')) - 1;
 
     this.init();
   }
 
   init() {
     this.swiperIns = new Swiper(this.block, {
+      initialSlide: this.initialSlide,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
