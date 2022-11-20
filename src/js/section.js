@@ -32,17 +32,17 @@ export default class Section {
     const prevSection = document.querySelector(`[data-section="${this.sectionNumber - 1}"]`);
     const nextSection = document.querySelector(`[data-section="${this.sectionNumber + 1}"]`);
     const currentSection = document.querySelector(`[data-section="${this.sectionNumber}"]`);
-    if (currentSection && !currentSection.getAttribute('data-loading')) {
+    if (currentSection && !currentSection.hasAttribute('data-loading')) {
       currentSection.setAttribute('data-loading', '');
       const imagesOnSection = currentSection.querySelectorAll('[data-lazy-src]');
       imagesOnSection.forEach((item) => item.setAttribute('src', item.getAttribute('data-lazy-src')));
     }
-    if (nextSection && !nextSection.getAttribute('data-loading')) {
+    if (nextSection && !nextSection.hasAttribute('data-loading')) {
       nextSection.setAttribute('data-loading', '');
       const imagesOnSection = nextSection.querySelectorAll('[data-lazy-src]');
       imagesOnSection.forEach((item) => item.setAttribute('src', item.getAttribute('data-lazy-src')));
     }
-    if (prevSection && !prevSection.getAttribute('data-loading')) {
+    if (prevSection && !prevSection.hasAttribute('data-loading')) {
       prevSection.setAttribute('data-loading', '');
       const imagesOnSection = prevSection.querySelectorAll('[data-lazy-src]');
       imagesOnSection.forEach((item) => item.setAttribute('src', item.getAttribute('data-lazy-src')));

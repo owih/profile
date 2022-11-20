@@ -27,6 +27,7 @@ export default class WorkCard {
     if (!this.block.hasAttribute(Selectors.HAS_PREVIEW)) return;
     this.playPauseControl.addEventListener('click', this.clickHandler);
     document.addEventListener(`pause-${this.block.getAttribute('id')}`, this.pause);
+    document.addEventListener('section.observer.toggle', () => this.isPlaying && this.pause());
 	}
 
   clickHandler() {
