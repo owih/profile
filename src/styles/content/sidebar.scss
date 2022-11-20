@@ -21,8 +21,6 @@
   }
   &_opened & {
     &__list {
-      // prevent jumping because of scroll bar
-      margin: auto $scrollbar-width auto 0;
       @include media-breakpoint-up(md) {
         margin: 0 -6px;
       }

@@ -20,6 +20,9 @@
       grid-row-end: 3;
       grid-column-start: 3;
       grid-column-end: 4;
+      .work-card__play-wrap {
+        display: block;
+      }
     }
   }
 }

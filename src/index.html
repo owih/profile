@@ -108,15 +108,24 @@
                                     <div class="about__title">
                                         <h1>About me</h1>
                                     </div>
-                                    <div class="about__text about__text_big">
-                                        <p>
-                                            I’m a 21-year-old <span class="about__highlight">frontend developer</span> located in Russia Volgograd.
-                                            I've been doing frontend development for <span class="about__highlight">over a year and a half</span>.
-                                            Well-<span class="about__highlight">organized</span> person with great <span class="about__highlight">attention to detail</span>.
-                                            Fan of TV series, <span class="about__highlight">basketball</span> and gym <span class="about__highlight">activities</span>.
-                                            I like to solve <span class="about__highlight">interesting problems</span> and <span class="about__highlight">learn very quickly</span>.
-                                            Ready for relocation
-                                        </p>
+                                    <div class="about__me-row">
+                                        <div class="about__me-col">
+                                            <div class="about__text about__text_big">
+                                                <p>
+                                                    I’m a 21-year-old <span class="about__highlight">frontend developer</span> located in Russia Volgograd.
+                                                    I've been doing frontend development for <span class="about__highlight">over a year and a half</span>.
+                                                    Well-<span class="about__highlight">organized</span> person with great <span class="about__highlight">attention to detail</span>.
+                                                    Fan of TV series, <span class="about__highlight">basketball</span> and gym <span class="about__highlight">activities</span>.
+                                                    I like to solve <span class="about__highlight">interesting problems</span> and <span class="about__highlight">learn very quickly</span>.
+                                                    <span class="about__highlight">Ready</span> for relocation
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="about__me-col">
+                                            <div class="about__image">
+                                                <img src="assets/img/avatar.jpg" alt="avatar" class="about__avatar">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +147,6 @@
                                              data-animation="1"
                                              data-path="long"
                                              data-side="left">
-                                        >
                                             <h6 class="about__subtitle">HTML 5</h6>
                                             <div class="about__text">
                                                 <p class="about__paragraph about__paragraph_inlined">BEM methodology</p>
@@ -184,7 +192,8 @@
                                             <div class="about__text">
                                                 <p class="about__paragraph about__paragraph_inlined"><span class="about__highlight">Express (basics)</span></p>
                                                 <p class="about__paragraph about__paragraph_inlined">PostgreSQL (basics)</p>
-                                                <p class="about__paragraph about__paragraph_inlined">HTTP</p>
+                                                <p class="about__paragraph about__paragraph_inlined">Rest API</p>
+                                                <p class="about__paragraph about__paragraph_inlined">Postman</p>
                                             </div>
                                         </div>
                                         <div class="about__item"
@@ -218,20 +227,27 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide about-slider__slide" data-pagination="Work experience">
+                    <div class="swiper-slide about-slider__slide" data-pagination="Experience">
                         <div class="about">
                             <div class="container">
                                 <div class="about__inner">
                                     <div class="about__title">
-                                        <h1>Work experience</h1>
+                                        <h1>Experience</h1>
                                     </div>
                                     <div class="about__text about__text_big">
-                                        <p class="about__paragraph">Before applying for a job, I studied <span class="about__highlight">web development</span> on my own for a
-                                            <span class="about__highlight">few months</span>,
-                                            after which I got into an excellent company <span class="about__highlight">Intervolga</span>, where I have been working
-                                            for <span class="about__highlight">more than a year</span> and got a huge amount of experience in <span class="about__highlight">development and teamwork</span>.
-                                            At work, I <span class="about__highlight">develop</span> pages from ready-made layouts, <span class="about__highlight">add</span> new features
-                                            to projects, <span class="about__highlight">fix</span> bugs, and so on...</p>
+                                        <p class="about__paragraph">
+                                            <span class="about__highlight">Self studying</span>: ~ 5 month
+                                        </p>
+                                        <p class="about__paragraph">
+                                            <span class="about__highlight">INTERVOLGA</span> company: ~ 1 year 3 month
+                                        </p>
+                                        <p class="about__paragraph">
+                                            I <span class="about__highlight">developed</span> pages (JS/Vue) from ready-made layouts in figma/PSD, <span class="about__highlight">add</span> new features
+                                            to projects, <span class="about__highlight">fix</span> bugs (design/legacy code), participated in the discussion and so on...
+                                        </p>
+                                        <p class="about__paragraph">
+                                            In this company I got a huge amount of <span class="about__highlight">experience</span> in development and teamwork.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -245,9 +261,15 @@
                                         <h1>Education</h1>
                                     </div>
                                     <div class="about__text about__text_big">
-                                        <p class="about__paragraph">At the moment I am finishing my <span class="about__highlight">last year (4th)</span>
-                                            at the <span class="about__highlight">University of VSPU</span>
-                                            in the direction of <span class="about__highlight">"Applied Informatics"</span></p>
+                                        <p class="about__paragraph">
+                                            <span class="about__highlight">University:</span> Volgograd State Socio-Pedagogical University
+                                        </p>
+                                        <p class="about__paragraph">
+                                            <span class="about__highlight">Education year:</span> 4th (last)
+                                        </p>
+                                        <p class="about__paragraph">
+                                            <span class="about__highlight">Speciality:</span> Applied computer science (Прикладная информатика)
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -268,7 +290,10 @@
                         <div class="work__grid-wrapper" data-animation="1">
                             <div class="work-grid" data-target-num="2">
                                 <div class="work-grid__item">
-                                    <div class="work-card">
+                                    <div class="work-card" data-has-preview id="work-card-1">
+                                        <div class="work-card__play-wrap">
+                                            <button class='work-card__play' data-description="Play/Pause preview" data-play-pause></button>
+                                        </div>
                                         <div class="work-card__description">
                                             <div class="work-card__description-title">Crypto list</div>
                                             <div class="work-card__description-row">
@@ -304,7 +329,10 @@
                                     </div>
                                 </div>
                                 <div class="work-grid__item">
-                                    <div class="work-card">
+                                    <div class="work-card" data-has-preview id="work-card-2">
+                                        <div class="work-card__play-wrap">
+                                            <button class='work-card__play' data-description="Play/Pause preview" data-play-pause></button>
+                                        </div>
                                         <div class="work-card__description">
                                             <div class="work-card__description-title">Just landing</div>
                                             <div class="work-card__description-row">
@@ -335,7 +363,10 @@
                                     </div>
                                 </div>
                                 <div class="work-grid__item">
-                                    <div class="work-card">
+                                    <div class="work-card" data-has-preview id="work-card-3">
+                                        <div class="work-card__play-wrap">
+                                            <button class='work-card__play' data-description="Play/Pause preview" data-play-pause></button>
+                                        </div>
                                         <div class="work-card__description">
                                             <div class="work-card__description-title">Social network</div>
                                             <div class="work-card__description-row">
@@ -343,16 +374,17 @@
                                                 <div class="work-card__description-item work-card__description-item_main"><span>Vuex store</span></div>
                                                 <div class="work-card__description-item"><span>Option API</span></div>
                                                 <div class="work-card__description-item"><span>HTTP</span></div>
-                                                <div class="work-card__description-item"><span>Vur-router</span></div>
+                                                <div class="work-card__description-item"><span>Rest API</span></div>
+                                                <div class="work-card__description-item"><span>Vue-router</span></div>
                                                 <div class="work-card__description-item"><span>Data Base</span></div>
                                                 <div class="work-card__description-item work-card__description-item_main"><span>Express</span></div>
-                                                <div class="work-card__description-item work-card__description-item_main"><span>Sequelize</span></div>
+                                                <div class="work-card__description-item"><span>Sequelize</span></div>
                                                 <div class="work-card__description-item"><span>BEM</span></div>
                                                 <div class="work-card__description-item"><span>SASS</span></div>
                                             </div>
                                         </div>
                                         <div class="work-card__image">
-                                            <img class="image" data-swap-src="assets/img/fullstack-app.png" data-lazy-src="assets/img/fullstack-app.gif" src="#" alt="img">
+                                            <img class="image" data-swap-src="assets/img/fullstack-app.gif" data-lazy-src="assets/img/fullstack-app.png" src="#" alt="img">
                                         </div>
                                         <div class="work-card__additional">
                                             <div class="work-card__links">
@@ -371,7 +403,10 @@
                                     </div>
                                 </div>
                                 <div class="work-grid__item">
-                                    <div class="work-card">
+                                    <div class="work-card" data-has-preview id="work-card-4">
+                                        <div class="work-card__play-wrap">
+                                            <button class='work-card__play' data-description="Play/Pause preview" data-play-pause></button>
+                                        </div>
                                         <div class="work-card__description">
                                             <div class="work-card__description-title">Posts & tictac app</div>
                                             <div class="work-card__description-row">
@@ -402,7 +437,10 @@
                                     </div>
                                 </div>
                                 <div class="work-grid__item">
-                                    <div class="work-card">
+                                    <div class="work-card" data-has-preview id="work-card-5">
+                                        <div class="work-card__play-wrap">
+                                            <button class='work-card__play' data-description="Play/Pause preview" data-play-pause></button>
+                                        </div>
                                         <div class="work-card__description">
                                             <div class="work-card__description-title">Crypto list</div>
                                             <div class="work-card__description-row">

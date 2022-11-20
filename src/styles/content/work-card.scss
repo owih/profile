@@ -2,6 +2,7 @@ $colors: $teal, $red, $purple, #1C5D99, #4357AD, #372554, #753742, #14213D, #B84
 $max-cards: 12;
 $max-works: 5;
 
+// Random colors for skills badges
 .work-grid__item {
   @for $i from 1 through $max-works {
     &:nth-child(#{$i}) {
@@ -60,6 +61,36 @@ $max-works: 5;
       transition: $transition-base;
     }
   }
+  &_playing & {
+    @include media-breakpoint-up(lg) {
+      &__play {
+        border-style: double;
+        border-width: 0 0 0 60px;
+        display: none;
+      }
+      &__description {
+        display: none;
+      }
+      &__image {
+        background-color: var(--themetoggle);
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  &_playing {
+    @include media-breakpoint-up(lg) {
+      &:before {
+        display: none;
+      }
+      &:hover {
+        .work-card__play {
+          display: block;
+        }
+      }
+    }
+  }
   &__description {
     @include media-breakpoint-up(lg) {
       position: absolute;
@@ -113,6 +144,33 @@ $max-works: 5;
       @include media-breakpoint-up(lg) {
         display: block;
       }
+    }
+  }
+  &__play-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 50%;
+  }
+  &__play {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+
+    border-color: transparent transparent transparent #202020;
+    transition: 100ms all ease;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+
+    &:hover {
+      border-color: transparent transparent transparent #404040;
     }
   }
   &:hover & {

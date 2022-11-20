@@ -10,6 +10,7 @@ import Description from "./description";
 import Animation from "./animation";
 import WorkGrid from "./work-grid";
 import AboutSlider from "./about-slider";
+import WorkCard from "./work-card";
 
 document.addEventListener('DOMContentLoaded', () => {
   [...document.getElementsByClassName('sidebar')].forEach((item) => new Sidebar(item));
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   [...document.getElementsByClassName('form')].forEach((item) => new Form(item));
   [...document.getElementsByClassName('work-grid')].forEach((item) => new WorkGrid(item));
   [...document.getElementsByClassName('about-slider')].forEach((item) => new AboutSlider(item));
+  [...document.getElementsByClassName('work-card')].forEach((item) => new WorkCard(item));
   [...document.querySelectorAll('[data-description]')].forEach((item) => new Description(item));
   [...document.querySelectorAll('[data-animation]')].forEach((item) => new Animation(item));
 })

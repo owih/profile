@@ -13,7 +13,6 @@ export default class Animation {
 	}
 
 	init() {
-    console.log(this.block)
 		this.createObserver();
 		this.setObserve();
 	}
@@ -23,7 +22,6 @@ export default class Animation {
 			entries.forEach(entry => {
 				if (entry.isIntersecting && !this.isAnimated) {
           this.isAnimated = true;
-          console.log(this.block)
 					this.setAnimationClasses();
 				}
 			})

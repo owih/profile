@@ -63,10 +63,8 @@ body.light {
   min-height: 667px;
   &_hidden {
     opacity: 0;
-    margin-right: $scrollbar-width;
     @include media-breakpoint-up(md) {
       opacity: unset;
-      margin-right: unset;
     }
   }
   &_flex {
